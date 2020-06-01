@@ -3,6 +3,9 @@
         <!-- Responsive datatable examples -->
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
 
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\sweet-alert2\sweetalert2.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\animate\animate.css" rel="stylesheet" type="text/css">
+
 <div class="page-content">
 
                 <div class="container-fluid">
@@ -61,8 +64,10 @@
                                               
                                             <div class="row">
                                                 <div class="col-sm-10 ml-auto">
-                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                    <button type="submit"type='button' class="btn btn-primary waves-effect waves-light"id="sa-success">Submit</button>
+                                                   
                                                     <button type="reset" class="btn btn-danger">Reset</button>
+                                                    
                                                 </div>
                                             </div> 
                                         </form>           
@@ -111,7 +116,7 @@
                                 <td class=" "><?php echo countRow('users', 'staff', $row->id) - countRow2('users', 'staff', $row->id, 'status', 'Active'); ?></td>
                                 <td class="action-link">
                                     <a href="<?php echo base_url(); ?>staff/edit/<?php echo $row->id; ?>"><i class="fas fa-edit text-info font-16"></i></a>
-                                    <a href="<?php echo base_url(); ?>staff/delete/<?php echo $row->id; ?>"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                    <a href="<?php echo base_url(); ?>staff/delete/<?php echo $row->id; ?>"><i class="fas fa-trash-alt text-danger font-16"id="sa-warning"></i></a>
                                 </td>	
                             </tr>
                         <?php } ?>
@@ -138,3 +143,6 @@
         <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\dataTables.responsive.min.js"></script>
         <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\responsive.bootstrap4.min.js"></script>
         <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.datatable.init.js"></script>
+        
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\sweet-alert2\sweetalert2.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.sweet-alert.init.js"></script>

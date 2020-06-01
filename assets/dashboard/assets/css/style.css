@@ -397,12 +397,12 @@ code {
 /* Navs & Tabs */
 .nav-pills .nav-item.show .nav-link,
 .nav-pills .nav-link.active {
-  background-color: #4d79f6;
+  background-color: #686869;
   color: #ffffff;
 }
 
 .nav-pills > .active > a > .badge {
-  color: #4d79f6;
+  color: #20294a;
 }
 
 .small,

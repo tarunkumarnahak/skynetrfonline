@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Metrica - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>Skynet Rfonline Admin Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A premium admin dashboard template by Mannatthemes" name="description" />
         <meta content="Mannatthemes" name="author" />
@@ -21,6 +21,10 @@
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <!-- Responsive datatable examples -->
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
+
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\sweet-alert2\sweetalert2.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\animate\animate.css" rel="stylesheet" type="text/css">
+
 
 
     </head>
@@ -254,7 +258,7 @@
                             </div>
                             <ul class="nav">
                                 <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>staff"><i class="dripicons-meter"></i>Add Staffs</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>userListing"><i class="dripicons-user-group"></i>View staff</a></li>
+                                
                                 
                             </ul>
                             <div class="title-box">
@@ -275,7 +279,8 @@
                                 <h6 class="menu-title">Plans</h6>        
                             </div>
                             <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href=" projects/projects-index.html"><i class="dripicons-view-thumb"></i>Add new plan</a></li>
+                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/"><i class="dripicons-view-thumb"></i>Add new plan</a></li>
+                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/all"><i class="dripicons-view-thumb"></i>All Plans</a></li>
                                
                             </ul>
                         </div><!-- end  Project-->
@@ -284,10 +289,10 @@
                                 <h6 class="menu-title">Accounts</h6>           
                             </div>
                             <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href=" ecommerce/ecommerce-index.html"><i class="dripicons-device-desktop"></i>Invoice</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" ecommerce/ecommerce-products.html"><i class="dripicons-view-apps"></i>Deposite</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" ecommerce/ecommerce-product-list.html"><i class="dripicons-list"></i>Receipt</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" ecommerce/ecommerce-product-detail.html"><i class="dripicons-article"></i>Online Payment</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>bill/"><i class="dripicons-device-desktop"></i>Add Invoice</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>bill/browse"><i class="dripicons-view-apps"></i>Browser Invoice</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>invoice/add"><i class="dripicons-list"></i>Add Receipt</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>invoice/all"><i class="dripicons-article"></i>All receipts</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" ecommerce/ecommerce-cart.html"><i class="dripicons-cart"></i>Transection</a></li>
                                 
                             </ul>
@@ -348,6 +353,19 @@
 
         <!-- App js -->
         <script src="<?php echo base_url(); ?>assets\dashboard\assets\js\app.js"></script>
+
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\sweet-alert2\sweetalert2.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.sweet-alert.init.js"></script>
+
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\moment\moment.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\daterangepicker\daterangepicker.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\select2\select2.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\timepicker\bootstrap-material-datetimepicker.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\bootstrap-maxlength\bootstrap-maxlength.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\bootstrap-touchspin\js\jquery.bootstrap-touchspin.min.js"></script>
+
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.forms-advanced.js"></script>
 
     </body>
 </html>
