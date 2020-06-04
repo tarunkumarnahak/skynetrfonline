@@ -1,62 +1,46 @@
+<div class="page-content">
 
-<div class="col-md-11 col-sm-11 col-xs-11 rightSideWrapper">
-    <div class="x_panel">
-        <div class="x_title">
-            <h2><i class="material-icons">settings</i> Settings</h2>
-
-            <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-            <?php foreach ($settings as $set) : ?>
-                <form id="settings" class="form-horizontal form-label-left" role="form" enctype="multipart/form-data" method="post" action="<?php echo base_url(); ?>settings/insert" accept-charset="utf-8">
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Logo</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="logo" type="file">
-                        </div>
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-right">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Utilities</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Settings</a></li>
+                                        
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Settings</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
                     </div>
+                    <!-- end page title end breadcrumb -->
 
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Favicon</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="favicon" type="file">
-                        </div>
-                    </div>
 
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Name <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" id="name" name="name" type="text" placeholder="Enter Name Here" value="<?php echo $set->name; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Slogan <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" id="name" name="slogan" type="text" placeholder="Enter Slogan Here" value="<?php echo $set->slogan; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mobile <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" id="mobile" name="mobile" type="text" placeholder="Enter Mobile Number" value="<?php echo $set->mobile; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Email <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" id="email" name="email" type="email" placeholder="Enter Email" value="<?php echo $set->email; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Default Currency <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-
-                            <select class="form-control col-md-7 col-xs-12" id="currency" name="currency" required>
+                </div><!-- container -->
+                <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title mt-0">All Settings</h4>
+                                    <form class="form-horizontal form-label-left" role="form" enctype="multipart/form-data" method="post" action="<?php echo base_url(); ?>settings/insert" accept-charset="utf-8">
+                                    <?php foreach ($settings as $set) : ?>
+                                    <div class="form-material">
+                                        <label class="mb-3">Logo</label>
+                                        <input type="file" class="form-control" placeholder="Enter Logo File"name="logo"   >
+                                        <label class="mb-3">Favicon </label>
+                                        <input  class="form-control" placeholder="Enter Favicon File"name="favicon" type="file">
+                                        <label class="mb-3">Company Name </label>
+                                        <input type="text" class="form-control" id="name" name="name" type="text" placeholder="Enter Name Here" value="<?php echo $set->name; ?>" required>
+                                        <label class="mb-3">Mobile </label>
+                                        <input type="text" class="form-control" pid="mobile" name="mobile" type="text" placeholder="Enter Mobile Number" value="<?php echo $set->mobile; ?>" required>
+                                        <label class="mb-3">Email </label>
+                                        <input  class="form-control" id="email" name="email" type="email" placeholder="Enter Email" value="<?php echo $set->email; ?>" required>
+                                        <label class="mb-3">Enter Currency</label>
+                                        
+                              <select class="form-control " id="currency" name="currency" required>
                                 <option>Select Currency</option>
                                 <option selected value="<?php echo $set->currency; ?>" ><?php echo $set->currency; ?></option>
                                 <option value="DZD" >Algeria Dinars </option>
@@ -128,142 +112,63 @@
                                 <option value="VEB" >Venezuela Bolivar </option>
                                 <option value="ZMK" >Zambia Kwacha </option>
                             </select>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Default Payment Mehtod <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="paymentmethod" type="text" placeholder="Enter Default Payment Ex: Paypal/Stripe" value="<?php echo $set->paymentmethod; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Default Payment Recipient <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="paymentacc" type="text" placeholder="Enter Default Payment ID Ex: Paypal/Stripe ID" value="<?php echo $set->paymentacc; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Default VAT <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="vat" type="number" placeholder="Enter Default VAT amount" value="<?php echo $set->vat; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Default Email API <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="form-control col-md-7 col-xs-12" name="emailapi">
-                                <option value="">Select Email API</option>
-                                <option selected value="<?php echo $set->emailapi; ?>"><?php echo $set->emailapi; ?> (Current)</option>
-                                <option value="Mailgun">Mailgun</option>
+                                        <label class="mb-3">Default Payment Mehtod </label>
+                                        <input type="text" class="form-control" name="paymentmethod" type="text" placeholder="Enter Default Payment Ex: Paypal/Stripe" value="<?php echo $set->paymentmethod; ?>" required>
+                                        <label class="mb-3">Default Payment Recipient </label>
+                                        <input type="text" class="form-control" name="paymentacc" type="text" placeholder="Enter Default Payment ID Ex: Paypal/Stripe ID" value="<?php echo $set->paymentacc; ?>" required>
+                                        <label class="mb-3">Default VAT </label>
+                                        <input type="text" class="form-control" name="vat" type="number" placeholder="Enter Default VAT amount" value="<?php echo $set->vat; ?>" required>
+                                        <label class="mb-3">Default Email API </label>
+                                        <select class="form-control " name="emailapi">
+                                            <option value="">Select Email API</option>
+                                            <option selected value="<?php echo $set->emailapi; ?>"><?php echo $set->emailapi; ?> (Current)</option>
+                                            <option value="Mailgun">Mailgun</option>
                             </select>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Default SMS API <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="form-control col-md-7 col-xs-12" name="smsapi">
+                            <label class="mb-3">Default SMS API  </label>
+                            <select class="form-control " name="smsapi">
                                 <option value="">Select SMS API</option>
                                 <option selected value="<?php echo $set->smsapi; ?>"><?php echo $set->smsapi; ?> (Current)</option>
                                 <option value="Nexmo">Nexmo</option>
                                 <option value="Twilio">Twilio</option>
                             </select>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Send SMS On New Bills & Invoice <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="form-control col-md-7 col-xs-12" name="smsonbills">
+                            
+                            <label class="mb-3">Send SMS On New Bills & Invoice</label>
+                            <select class="form-control " name="smsonbills">
                                 <option value="">Select SMS On/Off</option>
                                 <option selected value="<?php echo $set->smsonbills; ?>"><?php echo ($set->smsonbills == 1) ? 'On' : "Off" ; ?> (Current)</option>
                                 <option value="1">On</option>
                                 <option value="0">Off</option>
                             </select>
-                        </div>
-                    </div>
-
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Send Email On New Bills & Invoice <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="form-control col-md-7 col-xs-12" name="emailonbills">
+                            <label class="mb-3">Send Email On New Bills & Invoice </label>
+                           
+                            <select class="form-control" name="emailonbills">
                                 <option value="">Select Email On/Off</option>
                                 <option selected value="<?php echo $set->emailonbills; ?>"><?php echo ($set->emailonbills == 1) ? 'On' : "Off" ; ?> (Current)</option>
                                 <option value="1">On</option>
                                 <option value="0">Off</option>
                             </select>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mikrotik IP Address <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="mkipadd" type="text" placeholder="Enter Your Mikrotik Router IP" value="<?php echo $set->mkipadd; ?>" required>
-                        </div>
-                    </div>
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mikrotik User <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="mkuser" type="text" placeholder="Enter Mikrotik User" value="<?php echo $set->mkuser; ?>" required>
-                        </div>
-                    </div>
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mikrotik Password <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="mkpassword" type="password" placeholder="Enter Mikrotik Password" value="<?php echo $set->mkpassword; ?>" required>
-                        </div>
-                    </div>
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Address <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="address" type="text" placeholder="Enter Address" value="<?php echo $set->address; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">City <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="city" type="text" placeholder="Enter City" value="<?php echo $set->city; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Country <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="country" type="text" placeholder="Enter Country" value="<?php echo $set->country; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Zip Code <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" name="zip" type="text" placeholder="Enter Zip Code" value="<?php echo $set->zip; ?>" required>
-                        </div>
-                    </div>
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Copyright Text</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input class="form-control col-md-7 col-xs-12" id="location" name="copyright" type="text" placeholder="Enter Copyright Text" value="<?php echo $set->copyright; ?>">
-                        </div>
-                    </div>
-
-                    <div class="ln_solid"></div>
-
-                    <div class="form-group">
-                        <div class="col-md-6 col-md-offset-3">
-                            <button id="settingsSubmit" type="submit" class="btn btn-success"><i class="material-icons">done</i> Save Now</button>
-                        </div>
-                    </div>
-
-                </form>
-            <?php endforeach; ?>
-        </div>
-    </div>
+                            <label class="mb-3">Mikrotik IP Address </label>
+                                        <input type="text" class="form-control"  name="mkipadd" type="text" placeholder="Enter Your Mikrotik Router IP" value="<?php echo $set->mkipadd; ?>" required>
+                                        <label class="mb-3">Mikrotik User </label>
+                                        <input type="text" class="form-control" name="mkuser" type="text" placeholder="Enter Mikrotik User" value="<?php echo $set->mkuser; ?>" required>
+                                        <label class="mb-3">Mikrotik Password </label>
+                                        <input  class="form-control" name="mkpassword" type="password" placeholder="Enter Mikrotik Password" value="<?php echo $set->mkpassword; ?>" required>
+                                        <label class="mb-3">Address </label>
+                                        <input type="text" class="form-control" name="address" type="text" placeholder="Enter Address" value="<?php echo $set->address; ?>" required>
+                                        <label class="mb-3">City </label>
+                                        <input type="text" class="form-control"name="city" type="text" placeholder="Enter City" value="<?php echo $set->city; ?>" required>
+                                        <label class="mb-3">Country</label>
+                                        <input type="text" class="form-control"name="country" type="text" placeholder="Enter Country" value="<?php echo $set->country; ?>" required>
+                                        <label class="mb-3">Zip Code </label>
+                                        <input type="text" class="form-control"name="zip" type="text" placeholder="Enter Zip Code" value="<?php echo $set->zip; ?>" required>
+                                        <label class="mb-3">Copyright Text</label>
+                                        <input type="text" class="form-control"id="location" name="copyright" type="text" placeholder="Enter Copyright Text" value="<?php echo $set->copyright; ?>">
+                                        <br>
+                                        <button id="send"class="btn btn-primary" type="submit">Save Now</button>
+                                    </div>       
+                                </div><!--end card-body-->
+                            </div><!--end card-->                                
+                        </div> <!-- end col -->
+                        </form>
+                        <?php endforeach; ?>                  
 </div>
-</div><!-- Container -->

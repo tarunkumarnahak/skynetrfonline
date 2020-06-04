@@ -1,4 +1,15 @@
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\morris\morris.css">
+<link href="<?php echo base_url(); ?>assets\dashboard\assets\css\bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\css\icons.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\css\metisMenu.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\css\style.css" rel="stylesheet" type="text/css" />
+
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <!-- Responsive datatable examples -->
+        <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
 <div class="page-content">
+
 
 <div class="container-fluid">
     <!-- Page-Title -->
@@ -7,592 +18,470 @@
             <div class="page-title-box">
                 <div class="float-right">
                     <ol class="breadcrumb">
-                        
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                        <li class="breadcrumb-item active">All Details</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Dashboard</h4>
+                <h4 class="page-title">All Information</h4>
             </div><!--end page-title-box-->
         </div><!--end col-->
     </div>
     <!-- end page title end breadcrumb -->
-    
 
-    
-    <div class="row">
-        <div class="col-lg-9">
-            <div class="card">
-                <div class="card-body">                                        
-                    <ol class="c-progress-steps">
-                        <li class="c-progress-steps__step  done"><span>Planing</span></li>
-                        <li class="c-progress-steps__step  done"><span>Design</span></li>
-                        <li class="c-progress-steps__step  current"><span>Development</span></li>
-                        <li class="c-progress-steps__step"><span>Testing</span></li>
-                    </ol>
-                </div> <!--end card-body-->                                                                                                     
-            </div><!--end card-->
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-4 align-self-center">
-                                    <div class="icon-info">
-                                        <i class="mdi mdi-diamond-stone text-warning"></i>
-                                    </div> 
-                                </div>
-                                <div class="col-8 align-self-center text-right">
-                                    <div class="ml-2">
-                                        <p class="mb-1 text-muted">Projects</p>
-                                        <h4 class="mt-0 mb-1">35</h4>                                                                                                                                           
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div class="progress mt-2" style="height:3px;">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div><!--end col-->
 
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-4 align-self-center">
-                                    <div class="icon-info">
-                                        <i class="mdi mdi-account-multiple text-purple"></i>
-                                    </div> 
-                                </div>
-                                <div class="col-8 align-self-center text-right">
-                                    <div class="ml-2">
-                                        <p class="mb-1 text-muted">Teams</p>
-                                        <h4 class="mt-0 mb-1">12</h4>                                                                                                                                           
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div class="progress mt-2" style="height:3px;">
-                                <div class="progress-bar bg-purple" role="progressbar" style="width: 39%;" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div><!--end col-->
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-4 align-self-center">
-                                    <div class="icon-info">
-                                        <i class="mdi mdi-playlist-check text-success"></i>
-                                    </div> 
-                                </div>
-                                <div class="col-8 align-self-center text-right">
-                                    <div class="ml-2">
-                                        <p class="mb-0 text-muted">Tasks</p>
-                                        <h4 class="mt-0 mb-1 d-inline-block">40</h4>
-                                        <span class="badge badge-soft-success mt-1 shadow-none">Active</span>                                                                                                                                     
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div class="progress mt-2" style="height:3px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 48%;" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div><!--end col-->
-
-                <div class="col-lg-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-4 col-4 align-self-center">
-                                    <div class="icon-info">
-                                        <i class="mdi mdi-coin text-pink"></i>
-                                    </div> 
-                                </div>
-                                <div class="col-sm-8 col-8 align-self-center text-right">
-                                    <div class="ml-2">
-                                        <p class="mb-1 text-muted">Budget</p>
-                                        <h4 class="mt-0 mb-1">$18090</h4>                                                                                                                                           
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div class="progress mt-2" style="height:3px;">
-                                    <div class="progress-bar bg-pink" role="progressbar" style="width: 22%;" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->                                    
-                </div><!--end col-->
-            </div><!--end row-->                            
-        </div><!--end col-->
-        <div class="col-lg-3">
-            <div class="card">
-                <div class="card-body dash-info-carousel mb-0">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">                                            
-                                    <div class="col-12 align-self-center">
-                                        <div class="text-center">
-                                            <h4 class="mt-0 header-title text-left">Project Launch Date</h4>
-                                            <div class="my-3">
-                                               <img src="../assets/images/widgets/p-1.svg" alt="" height="103" class="">
-                                            </div>
-                                            <h2 class="project-title mb-1">Marketech World</h2>
-                                            <p class="mb-1 text-muted"><span class="mr-2 text-secondary font-14"><b>190 Days</b></span> Tuesday, 25 July 2019</p>
-                                        </div>
-                                    </div><!--end col-->                                                        
-                                </div><!--end row-->                                                    
-                            </div><!--end carousel-item-->
-                            <div class="carousel-item">
-                                <div class="row">                                            
-                                    <div class="col-12 align-self-center">
-                                        <div class="text-center">
-                                            <h4 class="mt-0 header-title text-left">Project Launch Date</h4>
-                                            <div class="my-3">
-                                                <img src="../assets/images/widgets/p-2.svg" alt="" height="103" class="">
-                                            </div>
-                                            <h2 class="project-title mb-1">Book My World</h2>
-                                            <p class="mb-1 text-muted"><span class="mr-2 text-secondary font-14"><b>130 Days</b></span> Tuesday, 25 July 2019</p>
-                                        </div>
-                                    </div><!--end col-->                                                        
-                                </div><!--end row-->                                                
-                            </div><!--end carousel-item-->
-
-                            <div class="carousel-item">
-                                <div class="row">                                            
-                                    <div class="col-12 align-self-center">
-                                        <div class="text-center">
-                                            <h4 class="mt-0 header-title text-left">Project Launch Date</h4>
-                                            <div class="my-3">
-                                                <img src="../assets/images/widgets/p-3.svg" alt="" height="103" class="">
-                                            </div>
-                                            <h2 class="project-title mb-1">Organic Farming</h2>
-                                            <p class="mb-1 text-muted"><span class="mr-2 text-secondary font-14"><b>100 Days</b></span> Tuesday, 25 July 2019</p>
-                                        </div>
-                                    </div><!--end col-->                                                        
-                                </div><!--end row-->                                              
-                            </div><!--end carousel-item-->
-                            <div class="carousel-item">
-                                <div class="row">                                            
-                                    <div class="col-12 align-self-center">
-                                        <div class="text-center">
-                                            <h4 class="mt-0 header-title text-left">Project Launch Date</h4>
-                                            <div class="my-3">
-                                                <img src="../assets/images/widgets/p-4.svg" alt="" height="103" class="">
-                                            </div>
-                                            <h2 class="project-title mb-1">Transfer money</h2>
-                                            <p class="mb-1 text-muted"><span class="mr-2 text-secondary font-14"><b>85 Days</b></span> Tuesday, 25 July 2019</p>
-                                        </div>
-                                    </div><!--end col-->                                                        
-                                </div><!--end row-->                                                
-                            </div><!--end carousel-item-->
-                            
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div><!--end card-body-->                                                                                                        
-            </div><!--end card-->
-        </div><!--end col-->
-    </div><!--end row-->
-
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title mt-0 mb-3">Project Budget</h4>                                    
-                    <div id="morris-bar-chart" class="morris-chart project-budget-chart"></div>                                    
-                    <ul class="list-unstyled text-center text-muted mb-0 mt-2">
-                        <li class="list-inline-item"><i class="mdi mdi-album text-primary mr-2"></i>Total Budget</li>
-                        <li class="list-inline-item"><i class="mdi mdi-album mr-2 text-secondary"></i>Amount Used</li>
-                        <li class="list-inline-item"><i class="mdi mdi-album mr-2 text-primary-light-alt"></i>Target Amount</li>
-                    </ul>
-                </div><!--end card-body-->
-            </div><!--end card-->
-        </div><!--end col-->
-        <div class="col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title mt-0 mb-3">Tasks Performance</h4>
-                    <div class="">
-                        <div id="d2_performance" class="apex-charts"></div>
-                    </div>
-                </div><!--end card-body-->
-            </div><!--end card-->
-        </div><!--end col-->
-        
-    </div><!--end row-->
-
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title mt-0 mb-3">Projects Workload</h4>
-                    <div class="row">
-                        <div class="col-lg-6">     
-                            <div id="work_load" class="morris-chart workload-chart"></div> 
-                            <ul class="list-unstyled text-center text-muted mb-0">
-                                <li class="list-inline-item font-13"><i class="mdi mdi-album font-16 text-blue mr-2"></i>External</li>
-                                <li class="list-inline-item font-13"><i class="mdi mdi-album font-16 text-pink mr-2"></i>Internal</li>
-                                <li class="list-inline-item font-13"><i class="mdi mdi-album font-16 text-light mr-2"></i>Other</li>
-                            </ul>            
-                        </div><!--end col-->
-                        <div class="col-lg-6">
-                            <div class="table-responsive">
-                                <table class="table mb-0">                                        
-                                    <tbody>
-                                        <tr>
-                                            <td class="border-top-0">
-                                                <img src="../assets/images/widgets/project1.jpg" alt="" class="thumb-sm rounded-circle mr-1">
-                                                <span class="text-info">Book My World</span>
-                                            </td>
-                                            <td class="border-top-0">
-                                                <small class="float-right text-muted ml-3 font-14">121h</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 55%; border-radius:5px;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="../assets/images/widgets/project2.jpg" alt="" class="thumb-sm rounded-circle mr-1">
-                                                <span class="text-info">Organic Farming</span>
-                                            </td>
-                                            <td>
-                                                <small class="float-right text-muted ml-3 font-14">522h</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 66%; border-radius:5px;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="../assets/images/widgets/project3.jpg" alt="" class="thumb-sm rounded-circle mr-1">
-                                                <span class="text-info">Marketech World</span>
-                                            </td>
-                                            <td>
-                                                <small class="float-right text-muted ml-3 font-14">245h</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar bg-blue" role="progressbar" style="width: 34%; border-radius:5px;" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <img src="../assets/images/widgets/project4.jpg" alt="" class="thumb-sm rounded-circle mr-1">
-                                                <span class="text-info">Transfer money</span>
-                                            </td>
-                                            <td>
-                                                <small class="float-right text-muted ml-3 font-14">80h</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 28%; border-radius:5px;" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table> <!--end row-->
-                            </div><!--end table-responsive--> 
-                        </div><!--end col-->
-                    </div><!--end row-->
-                                                                                        
-                </div><!--end card-body-->                                                                                                        
-            </div><!--end card-->
-        </div><!--end col-->
-
-        <div class="col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title mt-0 mb-3">Tasks List</h4>
-                    <div class="todo-list">                                        
-                        <div class="todo-box">
-                            <i class="remove far fa-trash-alt"></i> 
-                            <div class="todo-task">
-                                <label class="ckbox">
-                                    <input type="checkbox"><span>Icon change in Redesign App</span>
-                                </label>
-                            </div> 
-                        </div>
-                        <div class="todo-box">
-                            <i class="remove far fa-trash-alt"></i> 
-                            <div class="todo-task">
-                                <label class="ckbox">
-                                    <input type="checkbox" checked=""><span>Add search button Market Research</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="todo-box">
-                            <i class="remove far fa-trash-alt"></i> 
-                            <div class="todo-task">
-                                <label class="ckbox">
-                                    <input type="checkbox"><span>Test new features in tablets</span>
-                                </label>
-                            </div> 
-                        </div>
-                        <div class="todo-box">
-                            <i class="remove far fa-trash-alt"></i> 
-                            <div class="todo-task">
-                                <label class="ckbox">
-                                    <input type="checkbox" checked=""><span>Send IOS App documents</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="todo-box">
-                            <i class="remove far fa-trash-alt"></i> 
-                            <div class="todo-task">
-                                <label class="ckbox">
-                                    <input type="checkbox"><span>Connect API to pages</span>
-                                </label>
-                            </div> 
-                        </div>                                                                                               
-                    </div>
-
-                    <div class="input-group custom-input">   
-                        <input type="text" class="form-control todo-list-input"  placeholder="Add task">
-                        <span class="input-group-append"></span>
-                        <button class="btn btn-primary add-new-todo-btn">Add</button>                                          
-                    </div>                                       
-                </div><!--end card-body-->                                                                                                        
-            </div><!--end card-->
-        </div><!--end col-->                     
-    </div><!--end row-->
-
-    <div class="row">
-        <div class="col-lg-9">
-            <div class="card">                                
-                <div class="card-body">
-                    <h4 class="mt-0 mb-3 header-title">All Projects</h4>           
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="table-responsive">
-                                <table class="table table-hover mb-0">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th>Project Name</th>
-                                            <th>Client Name</th>
-                                            <th>Start Date</th>
-                                            <th>Deadline</th>
-                                            <th>Status</th>
-                                            <th>Progress</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Product Devlopment</td>
-                                            <td>
-                                                <img src="../assets/images/users/user-2.jpg" alt="" class="thumb-sm rounded-circle mr-2">
-                                                Kevin J. Heal
-                                            </td>
-                                            <td>20/3/2018</td>
-                                            <td>5/5/2018</td>
-                                            <td><span class="badge badge-boxed  badge-soft-success">Active</span></td>
-                                            <td>
-                                                <small class="float-right ml-2 pt-1 font-10">92%</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>New Office Building</td>
-                                            <td>
-                                                <img src="../assets/images/users/user-3.jpg" alt="" class="thumb-sm rounded-circle mr-2">
-                                                Frank M. Lyons
-                                            </td>
-                                            <td>11/6/2018</td>
-                                            <td>15/7/2018</td>
-                                            <td><span class="badge badge-boxed  badge-soft-warning">Panding</span></td>
-                                            <td>
-                                                <small class="float-right ml-2 pt-1 font-10">0%</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar  bg-secondary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Website &amp; Blog</td>
-                                            <td>
-                                                <img src="../assets/images/users/user-4.jpg" alt="" class="thumb-sm rounded-circle mr-2">
-                                                Hyman M. Cross
-                                            </td>
-                                            <td>21/6/2018</td>
-                                            <td>3/7/2018</td>
-                                            <td><span class="badge badge-boxed  badge-soft-warning">Panding</span></td>
-                                            <td>
-                                                <small class="float-right ml-2 pt-1 font-10">0%</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar  bg-secondary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Market Research</td>
-                                            <td>
-                                                <img src="../assets/images/users/user-5.jpg" alt="" class="thumb-sm rounded-circle mr-2">
-                                                Angelo E. Butler
-                                            </td>
-                                            <td>30/4/2018</td>
-                                            <td>1/6/2018</td>
-                                            <td><span class="badge badge-boxed  badge-soft-success">Active</span></td>
-                                            <td>
-                                                <small class="float-right ml-2 pt-1 font-10">78%</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar  bg-secondary" role="progressbar" style="width: 78%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Export Marketing</td>
-                                            <td>
-                                                <img src="../assets/images/users/user-6.jpg" alt="" class="thumb-sm rounded-circle mr-2">
-                                                Robert C. Golding
-                                            </td>
-                                            <td>20/3/2018</td>
-                                            <td>5/5/2018</td>
-                                            <td><span class="badge badge-boxed  badge-soft-success">Active</span></td>
-                                            <td>
-                                                <small class="float-right ml-2 pt-1 font-10">45%</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar  bg-secondary" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Product Devlopment</td>
-                                            <td>
-                                                <img src="../assets/images/users/user-7.jpg" alt="" class="thumb-sm rounded-circle mr-2">
-                                                Kevin J. Heal
-                                            </td>
-                                            <td>14/2/2018</td>
-                                            <td>10/8/2018</td>
-                                            <td><span class="badge badge-boxed  badge-soft-success">Active</span></td>
-                                            <td>
-                                                <small class="float-right ml-2 pt-1 font-10">35%</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar  bg-secondary" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>New Office Building</td>
-                                            <td>
-                                                <img src="../assets/images/users/user-3.jpg" alt="" class="thumb-sm rounded-circle mr-2">
-                                                Frank M. Lyons
-                                            </td>
-                                            <td>11/6/2018</td>
-                                            <td>15/7/2018</td>
-                                            <td><span class="badge badge-boxed  badge-soft-warning">Panding</span></td>
-                                            <td>
-                                                <small class="float-right ml-2 pt-1 font-10">0%</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar  bg-secondary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Website &amp; Blog</td>
-                                            <td>
-                                                <img src="../assets/images/users/user-8.jpg" alt="" class="thumb-sm rounded-circle mr-2">
-                                                Phillip T. Morse
-                                            </td>
-                                            <td>8/4/2018</td>
-                                            <td>2/6/2018</td>
-                                            <td><span class="badge badge-boxed  badge-soft-danger">Complete</span></td>
-                                            <td>
-                                                <small class="float-right ml-2 pt-1 font-10">100%</small>
-                                                <div class="progress mt-2" style="height:5px;">
-                                                    <div class="progress-bar  bg-pink" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                        </tr>                                                                                                  
-                                    </tbody>
-                                </table>
-                            </div><!--end table-responsive-->                                            
-                        </div><!--end col-->
-                    </div> <!--end row-->
-                </div><!--end card-body-->                                                                                                        
-            </div><!--end card-->
-        </div><!--end col-->
-        <div class="col-lg-3">
-            <div class="card">                                       
-                <div class="card-body"> 
-                    <h5 class="mt-0 mb-3">Activity</h5>
-                    <div class="slimscroll project-dash-activity">
-                        <div class="activity">
-                            <i class="mdi mdi-check text-success"></i>
-                            <div class="time-item">
-                                <div class="item-info">
-                                    <div class="text-muted text-right font-10">5 minutes ago</div>
-                                    <h5 class="mt-0">Task finished</h5>
-                                    <p class="text-muted font-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        <a href="#" class="text-info">[more info]</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <i class="mdi mdi-alert-outline text-warning"></i>                                                                                                            
-                            <div class="time-item">
-                                <div class="item-info">
-                                    <div class="text-muted text-right font-10">30 minutes ago</div>
-                                    <h5 class="mt-0">Task Overdue</h5>
-                                    <p class="text-muted font-13">Lorem ipsum dolor sit amet.
-                                        <a href="#" class="text-info">[more info]</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <i class="mdi mdi-code-tags-check text-info"></i>    
-                            <div class="time-item ">
-                                <div class="item-info">
-                                    <div class="text-muted text-right font-10">50 minutes ago</div>
-                                    <h5 class="mt-0">Complete code check</h5>
-                                    <p class="text-muted font-13">There are many variations of passages of Lorem Ipsum available.
-                                        <a href="#" class="text-info">[more info]</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <i class="mdi mdi-comment-outline text-purple"></i>
-                            <div class="time-item ">
-                                <div class="item-info">
-                                    <div class="text-muted text-right font-10">1 Day ago</div>
-                                    <h5 class="mt-0">New Comment</h5>
-                                    <p class="text-muted font-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        <a href="#" class="text-info">[more info]</a>
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <i class="mdi mdi-clock-start text-secondary"></i>
-                            <div class="time-item">
-                                <div class="item-info">
-                                    <div class="text-muted text-right font-10">5 minutes ago</div>
-                                    <h5 class="my-0">Start New Project</h5>
-                                    <p class="text-muted font-13">Lorem ipsum dolor sit amet.
-                                        <a href="#" class="text-info">[more info]</a>
-                                    </p>
-                                </div>
-                            </div> 
-                            <i class="mdi mdi-check text-success"></i>
-                            <div class="time-item">
-                                <div class="item-info">
-                                    <div class="text-muted text-right font-10">5 minutes ago</div>
-                                    <h5 class="mt-0">Task finished</h5>
-                                    <p class="text-muted font-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        <a href="#" class="text-info">[more info]</a>
-                                    </p>
-                                </div>
-                            </div>                                                                                                       
-                        </div><!--end activity-->
-                    </div><!--end project-dash-activity-->
-                </div><!--end card-body-->                                                                                                        
-            </div><!--end card-->
-        </div><!--end col-->
-    </div><!--end row-->
 </div><!-- container -->
+<h4>Users Statistics</h4>
+<div class="row justify-content-left">
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-user-group report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-warning">Total Users</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->from('users');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-clock report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-secondary">Pending Users</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->like('status', 'Pending');
+                        $this->db->from('users');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-meter report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-success">Active Users</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->like('status', 'Deactive');
+                        $this->db->from('users');
+                        $deactive_users = $this->db->count_all_results();
+                        $this->db->like('status', 'Active');
+                        $this->db->from('users');
+                        $active_users = $this->db->count_all_results();
+                        echo $active_users - $deactive_users;
+                        ?>.00</h3>
+                                   
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-wallet report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-danger">Deactived Users</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->like('status', 'Deactive');
+                        $this->db->from('users');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                   
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->     
+                          
+                    </div><!--end row-->
+                <h4>Invoice Staticstics</h4>
+                <div class="row justify-content-left">
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-user-group report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-warning">Total Invoice</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->from('invoice');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-meter report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-success">Paid Invoice</span>
+                                    <h3 class="my-3"><?php
+//                        $this->db->like('status', 'Paid');
+                        $this->db->from('invoice');
+                        $totalInvoice =  $this->db->count_all_results();
+
+                        $this->db->like('status', 'Unpaid');
+                        $this->db->from('invoice');
+                        $totalUnpaidInvoice =  $this->db->count_all_results();
+
+                        echo $totalInvoice - $totalUnpaidInvoice;
+
+                        ?>.00</h3>
+                                   
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-wallet report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-danger">Unpaid Invoice</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->like('status', 'Unpaid');
+                        $this->db->from('invoice');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                   
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->     
+                          
+                    </div><!--end row--> 
+<h4>Payment Statistics</h4>
+<div class="row justify-content-left">
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-user-group report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-warning">Total Payments</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->from('payments');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-clock report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-secondary">This Month</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->where('month(saletime)', date('m'));
+                        $this->db->where('year(saletime)', date('Y'));
+                        //$this->db->like('status', 'Paid');
+                        $this->db->from('payments');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-meter report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-success"> This Year</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->where('year(saletime)', date('Y'));
+                        //$this->db->like('status', 'Paid');
+                        $this->db->from('payments');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                   
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-wallet report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-danger"> Total Amount ( <?php echo settings()[0]->currency; ?> )</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('payments');
+                        $subOfPay = $this->db->get();
+                        $subOfPay = $subOfPay->result()[0];
+                        echo number_format($subOfPay->amount, 2);
+                        ?></h3>
+                                   
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->     
+                          
+                    </div><!--end row-->
+                    <div class="row justify-content-left">
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-user-group report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-warning"> Month's Amount ( <?php echo settings()[0]->currency; ?> )</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('payments');
+                        $this->db->where('month(saletime)', date('m'));
+                        $subOfPay = $this->db->get();
+                        $subOfPay = $subOfPay->result()[0];
+                        echo number_format($subOfPay->amount, 2);
+                        ?></h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-clock report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-secondary"> Year's Amount ( <?php echo settings()[0]->currency; ?> ) </span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('payments');
+                        $this->db->where('year(saletime)', date('Y'));
+                        $subOfPay = $this->db->get();
+                        $subOfPay = $subOfPay->result()[0];
+                        echo number_format($subOfPay->amount, 2);
+                        ?></h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->
+                       
 </div>
+<h4>Income/Expense Statistics</h4>
+<div class="row justify-content-left">
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-user-group report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-warning"> Total Income ( <?php echo settings()[0]->currency; ?> )</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('balance');
+                        $this->db->like('type', 'Income');
+                        $sum = $this->db->get();
+                        $sum = $sum->result()[0];
+                        echo number_format($sum->amount, 2);
+                        ?></h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-clock report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-secondary">This Month ( <?php echo settings()[0]->currency; ?> )</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('balance');
+                        $this->db->like('type', 'Income');
+                        $this->db->where('month(date)', date('m'));
+                        $this->db->where('year(date)', date('Y'));
+                        $sum = $this->db->get();
+                        $sum = $sum->result()[0];
+                        echo number_format($sum->amount, 2);
+                        ?></h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-meter report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-success">This Year ( <?php echo settings()[0]->currency; ?> )</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('balance');
+                        $this->db->like('type', 'Income');
+                        $this->db->where('year(date)', date('Y'));
+                        $sum = $this->db->get();
+                        $sum = $sum->result()[0];
+                        echo number_format($sum->amount, 2);
+                        ?></h3>
+                                   
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-wallet report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-danger"> Total Expense ( <?php echo settings()[0]->currency; ?> )</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('balance');
+                        $this->db->like('type', 'Expense');
+                        $sum = $this->db->get();
+                        $sum = $sum->result()[0];
+                        echo number_format($sum->amount, 2);
+                        ?></h3>
+                                   
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->     
+                          
+                    </div><!--end row-->
+                    <div class="row justify-content-left">
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-user-group report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-warning"> This Month ( <?php echo settings()[0]->currency; ?> )</span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('balance');
+                        $this->db->like('type', 'Expense');
+                        $this->db->where('month(date)', date('m'));
+                        $this->db->where('year(date)', date('Y'));
+                        $sum = $this->db->get();
+                        $sum = $sum->result()[0];
+                        echo number_format($sum->amount, 2);
+                        ?></h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col--> 
+                        <div class="col-md-3">
+                            <div class="card report-card">
+                                <div class="card-body">
+                                    <div class="float-right">
+                                        <i class="dripicons-clock report-main-icon"></i>
+                                    </div> 
+                                    <span class="badge badge-secondary">  This Year ( <?php echo settings()[0]->currency; ?> ) </span>
+                                    <h3 class="my-3"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('balance');
+                        $this->db->like('type', 'Expense');
+                        $this->db->where('year(date)', date('Y'));
+                        $sum = $this->db->get();
+                        $sum = $sum->result()[0];
+                        echo number_format($sum->amount, 2);
+                        ?></h3>
+                                    
+                                </div><!--end card-body--> 
+                            </div><!--end card--> 
+                        </div> <!--end col-->
+                       
 </div>
+<div class="clearfix"></div>
+
+    <div class="x_panel">
+        <div class="x_title">
+            <h2> Recent Users</h2>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                <thead>
+                    <tr class="headings">
+                        <th class="column-title" style="display: table-cell;">No </th>
+                       
+                        <th class="column-title" style="display: table-cell;">Name </th>
+                        <th class="column-title" style="display: table-cell;">Phone </th>
+                        <th class="column-title" style="display: table-cell;">Package </th>
+                        <th class="column-title" style="display: table-cell;">ID </th>
+                        <th class="column-title" style="display: table-cell;">Password </th>
+                        <th class="column-title" style="display: table-cell;">Location </th>
+                        <th class="column-title" style="display: table-cell;">Status </th>
+                        <th class="column-title" style="display: table-cell;">Action </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $i = 0;
+                    foreach ($users as $row) {
+                        $i++;
+                        ?>
+                        <tr class="even pointer">
+                            <td class=" "><?php echo $i; ?></td>
+                            
+                            <td class=" "><?php echo $row->name; ?></td>
+                            <td class=" "><?php echo $row->mobile; ?></td>
+
+                            <?php if(package($row->package)){ ?>
+                                <td class=" "><span class="label label-primary"><?php echo package($row->package)->packname . " (" . package($row->package)->packvolume . ") (" . package($row->package)->packprice . ") (" . package($row->package)->total . ")" ; ?></span></td>
+                            <?php }else{ ?>
+                                <td class=" ">N/A</td>
+                            <?php } ?>
+
+                            <td class=" "><?php echo $row->user_id; ?></td>
+                            <td class=" "><?php echo $row->password; ?></td>
+                            <td class=" "><span class="label label-primary"><?php echo $row->location; ?></span></td>
+                            <td class=""><span class="label label-<?php
+                                if ($row->status == "Active") {
+                                    echo "success";
+                                } elseif ($row->status == "Pending") {
+                                    echo "primary";
+                                } else {
+                                    echo "warning";
+                                }
+                                ?>"><?php echo $row->status; ?></span></td>
+                            <td class="action-link"><a href="<?php echo base_url(); ?>user/view/<?php echo $row->id; ?>/"><span class="label label-success">View</span></a> <a href="<?php echo base_url(); ?>user/edit/<?php echo $row->id; ?>/"><span class="label label-warning">Edit</span></a> <a href="<?php echo base_url(); ?>user/delete/<?php echo $row->id; ?>/" ><span class="label label-danger delete">Delete</span></a></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+</div><!-- Container -->
+
+
+                <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\morris\morris.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\raphael\raphael.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.morris.init.js"></script>
+        
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\jquery.dataTables.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\dataTables.buttons.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\buttons.bootstrap4.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\jszip.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\pdfmake.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\vfs_fonts.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\buttons.html5.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\buttons.print.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\dataTables.responsive.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\responsive.bootstrap4.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.datatable.init.js"></script>
+        

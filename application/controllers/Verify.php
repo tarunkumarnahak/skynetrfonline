@@ -29,14 +29,6 @@ class Verify extends CI_Controller {
         $this->load->view('verify');
     }
 
-    public function kenadekha() {
-        $data['kenadekha'] = $this->input->post('purchasecode');
-        $this->db->where('id', 1);
-        $this->db->update('settings', $data);
-        $this->session->set_flashdata('success', 'Purchase Code Verifying...');
-        redirect('home', 'refresh');
-    }
-
-}
+  
 
 ?>

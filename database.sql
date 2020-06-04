@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `zal2`
+-- Database: `zal4`
 --
 
 -- --------------------------------------------------------
@@ -32,8 +32,8 @@ CREATE TABLE `admin` (
   `id` int(100) NOT NULL,
   `email` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(250) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
+ ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+)
 --
 -- Dumping data for table `admin`
 --
@@ -297,15 +297,15 @@ CREATE TABLE `settings` (
   `zip` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `location` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `copyright` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `kenadekha` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `logo`, `favicon`, `name`, `slogan`, `mobile`, `email`, `currency`, `paymentmethod`, `paymentacc`, `vat`, `smsapi`, `emailapi`, `smsonbills`, `emailonbills`, `mkipadd`, `mkuser`, `mkpassword`, `address`, `city`, `country`, `zip`, `location`, `copyright`, `kenadekha`) VALUES
-(1, '20181107_055321_241543.png', '20181107_055321_241543.png', 'Zal - ISP Management System', 'Easy, Clean and Simple', '00000000000', 'support@zal.com', 'USD', 'Paypal', 'support@zal.com', 15, 'Nexmo', 'Mailgun', 1, 1, '192.168.0.3', 'admin', '', '1634 Sussex Court', 'TX', 'USA', '76566', '', 'Copyright @ 2018', '');
+INSERT INTO `settings` (`id`, `logo`, `favicon`, `name`, `slogan`, `mobile`, `email`, `currency`, `paymentmethod`, `paymentacc`, `vat`, `smsapi`, `emailapi`, `smsonbills`, `emailonbills`, `mkipadd`, `mkuser`, `mkpassword`, `address`, `city`, `country`, `zip`, `location`, `copyright`) VALUES
+(	1, '20181107_055321_241543.png', '20181107_055321_241543.png', 'Zal - ISP Management System', 'Easy, Clean and Simple', '00000000000', 'support@zal.com', 'USD', 'Paypal', 'support@zal.com', 15, 'Nexmo', 'Mailgun', 1, 1, '192.168.0.3', 'admin', '', '1634 Sussex Court', 'TX', 'USA', '76566', '', 'Copyright @ 2018');
 
 -- --------------------------------------------------------
 

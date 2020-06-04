@@ -22,7 +22,7 @@ class Package extends CI_Controller {
     function __construct() {
         parent::__construct();
         isAdmin();
-        isKena();
+        
         isLogin();
         $this->load->model('main');
     }

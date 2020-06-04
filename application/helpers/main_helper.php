@@ -322,19 +322,6 @@ if (!function_exists('countUserByArea')) {
     }
 }
 
-if (!function_exists('kenadekha')) {
-    function kenadekha() {
-		return true;
-    }
-}
-
-if (!function_exists('isKena')) {
-    function isKena() {
-        if(kenadekha()  == false){
-            redirect('verify', 'refresh');
-        }
-    }
-}
 
 
 if (!function_exists('convertCurrency')) {

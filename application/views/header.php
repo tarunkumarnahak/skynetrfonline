@@ -237,7 +237,10 @@
                                 <h6 class="menu-title">Home</h6>       
                             </div>
                             <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>Home"><i class="dripicons-meter"></i>Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>Home"><i class="dripicons-meter"></i>Dashboard</a></li>
+                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>area"><i class="dripicons-meter"></i>Add Area</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>pppoe/"><i class="dripicons-view-thumb"></i>PPPOE</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>hotspot/"><i class="dripicons-view-thumb"></i>Hotspot</a></li>
                                 
                                 
                             </ul>
@@ -264,14 +267,13 @@
                             <div class="title-box">
                                 <h6 class="menu-title">Users</h6>
                             </div>
-                            <ul class="nav">
+                            <ul class="nav">>
                                 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>addCustomer"><i class="dripicons-device-desktop"></i>Quick Add Users</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-exchange.html"><i class="dripicons-swap"></i>CRN List</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-wallet.html"><i class="dripicons-wallet"></i>CAF List</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-calendar.html"><i class="dripicons-calendar"></i>All Users</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-news.html"><i class="dripicons-blog"></i>Users expiring in 7 days</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-ico.html"><i class="dripicons-stack"></i>Disabled/Deleted Users</a></li>
-                                
                             </ul>
                         </div><!-- end Crypto -->
                         <div id="MetricaProject" class="main-icon-menu-pane">
@@ -279,9 +281,9 @@
                                 <h6 class="menu-title">Plans</h6>        
                             </div>
                             <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/"><i class="dripicons-view-thumb"></i>Add new plan</a></li>
+                            <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/"><i class="dripicons-view-thumb"></i>Add new plan</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/all"><i class="dripicons-view-thumb"></i>All Plans</a></li>
-                               
+                                                           
                             </ul>
                         </div><!-- end  Project-->
                         <div id="MetricaEcommerce" class="main-icon-menu-pane">
@@ -289,12 +291,12 @@
                                 <h6 class="menu-title">Accounts</h6>           
                             </div>
                             <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>bill/"><i class="dripicons-device-desktop"></i>Add Invoice</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>bill/"><i class="dripicons-device-desktop"></i>Add Invoice</a></li>
                                 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>bill/browse"><i class="dripicons-view-apps"></i>Browser Invoice</a></li>
                                 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>invoice/add"><i class="dripicons-list"></i>Add Receipt</a></li>
                                 <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>invoice/all"><i class="dripicons-article"></i>All receipts</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" ecommerce/ecommerce-cart.html"><i class="dripicons-cart"></i>Transection</a></li>
-                                
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>payments/all"><i class="dripicons-cart"></i>Transection</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>balance/"><i class="dripicons-card"></i>Income/Expenses</a></li>                                
                             </ul>
                         </div><!-- end Ecommerce -->
                         <div id="MetricaCRM" class="main-icon-menu-pane">
@@ -323,10 +325,10 @@
                             <div class="title-box">
                                 <h6 class="menu-title">Utilites</h6>        
                             </div>
-                            <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href=" pages/pages-profile.html"><i class="dripicons-user"></i>Support User</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" pages/pages-chat.html"><i class="dripicons-conversation"></i>Managers</a></li>
-                                
+                            <ul class="nav"><li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>settings"><i class="mdi mdi-settings"></i>Settings</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>communication"><i class="dripicons-conversation"></i>Communication</a></li>    
+                            <li class="nav-item"><a class="nav-link" href=" pages/pages-profile.html"><i class="dripicons-user"></i>Support User</a></li>
+                            
                             </ul>
                         </div><!-- end Pages -->
                         <div id="MetricaAuthentication" class="main-icon-menu-pane">

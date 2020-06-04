@@ -1,8 +1,30 @@
+<div class="page-content">
+
+<div class="container-fluid">
+    <!-- Page-Title -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <div class="float-right">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Utilities</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Communication</a></li>
+                        <li class="breadcrumb-item active">Send sms/mail</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Communication</h4>
+            </div><!--end page-title-box-->
+        </div><!--end col-->
+    </div>
+    <!-- end page title end breadcrumb -->
+
+
+</div><!-- container -->
 
 <div class="col-md-11 col-sm-11 col-xs-11 rightSideWrapper">
     <div class="x_panel">
         <div class="x_title">
-            <h2><i class="material-icons">sms</i> Email</h2>
+            <h2>Email</h2>
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
@@ -10,11 +32,11 @@
                 <div>
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#quickEmail" aria-controls="quickEmail" role="tab" data-toggle="tab">Quick Email</a></li>
-                        <li role="presentation"><a href="#userID" aria-controls="home" role="tab" data-toggle="tab">Email By UserID</a></li>
-                        <li role="presentation"><a href="#package" aria-controls="profile" role="tab" data-toggle="tab">Email By Package</a></li>
-                        <li role="presentation"><a href="#area" aria-controls="profile" role="tab" data-toggle="tab">Email By Area</a></li>
-                        <li role="presentation"><a href="#admin" aria-controls="profile" role="tab" data-toggle="tab">Email By Staff</a></li>
+                        <li role="presentation" class="btn btn-primary"><a href="#quickEmail" aria-controls="quickEmail" role="tab" data-toggle="tab">Quick Email</a></li>
+                        <li role="presentation"class="btn btn-primary"><a href="#userID" aria-controls="home" role="tab" data-toggle="tab"> Email By UserID</a></li>
+                        <li role="presentation"class="btn btn-primary"><a href="#package" aria-controls="profile" role="tab" data-toggle="tab"> Email By Package</a></li>
+                        <li role="presentation"class="btn btn-primary"><a href="#area" aria-controls="profile" role="tab" data-toggle="tab"> Email By Area</a></li>
+                        <li role="presentation"class="btn btn-primary"><a href="#admin" aria-controls="profile" role="tab" data-toggle="tab"> Email By Staff</a></li>
                     </ul>
 
                     <!-- Tab panes -->
@@ -47,7 +69,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-4">
-                                        <button id="send" type="Save Now!" class="btn btn-success"><i class="material-icons">chat</i> Send Now</button>
+                                        <button id="send" type="Save Now!" class="btn btn-success"> Send Now</button>
                                     </div>
                                 </div>
                             </form>
@@ -223,7 +245,7 @@
 
     <div class="x_panel">
         <div class="x_title">
-            <h2><i class="material-icons">sms</i> SMS</h2>
+            <h2> SMS</h2>
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
@@ -231,11 +253,11 @@
                 <div>
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#quickEmailSMS" aria-controls="quickEmailSMS" role="tab" data-toggle="tab">Quick SMS</a></li>
-                        <li role="presentation"><a href="#userIDSMS" aria-controls="home" role="tab" data-toggle="tab">SMS By UserID</a></li>
-                        <li role="presentation"><a href="#packageSMS" aria-controls="profile" role="tab" data-toggle="tab">SMS By Package</a></li>
-                        <li role="presentation"><a href="#areaSMS" aria-controls="profile" role="tab" data-toggle="tab">SMS By Area</a></li>
-                        <li role="presentation"><a href="#adminSMS" aria-controls="profile" role="tab" data-toggle="tab">SMS By Staff</a></li>
+                        <li role="presentation"  class="btn btn-primary"><a href="#quickEmailSMS" aria-controls="quickEmailSMS" role="tab" data-toggle="tab">Quick SMS</a></li>
+                        <li role="presentation" class="btn btn-primary"><a href="#userIDSMS" aria-controls="home" role="tab" data-toggle="tab">SMS By UserID</a></li>
+                        <li role="presentation" class="btn btn-primary"><a href="#packageSMS" aria-controls="profile" role="tab" data-toggle="tab">SMS By Package</a></li>
+                        <li role="presentation" class="btn btn-primary"><a href="#areaSMS" aria-controls="profile" role="tab" data-toggle="tab">SMS By Area</a></li>
+                        <li role="presentation" class="btn btn-primary"><a href="#adminSMS" aria-controls="profile" role="tab" data-toggle="tab">SMS By Staff</a></li>
                     </ul>
 
                     <!-- Tab panes -->
@@ -261,7 +283,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-4">
-                                        <button id="send" type="Save Now!" class="btn btn-success"><i class="material-icons">chat</i> Send Now</button>
+                                        <button id="send" type="Save Now!" class="btn btn-success"> Send Now</button>
                                     </div>
                                 </div>
                             </form>

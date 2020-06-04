@@ -1,86 +1,141 @@
+<div class="page-content">
 
-<div class="col-md-11 col-sm-11 col-xs-11 rightSideWrapper">  
-    <div class="x_panel">
-        <div class="x_title">
-            <h2><i class="fa fa-bar-chart fa-fw"></i> Payment Statistics</h2>
-            <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-            <div class="row tile_count">
-                <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
-                    <span class="count_top"><i class="material-icons">assignment_turned_in</i> Total Balances</span>
-                    <div class="count blue"><?php
-                        $this->db->from('payments');
-                        echo $this->db->count_all_results();
-                        ?>.00</div>
+<div class="container-fluid">
+    <!-- Page-Title -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <div class="float-right">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Accounts</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Account/Expanses</a></li>
+                        <li class="breadcrumb-item active">Edit Balance</li>
+                    </ol>
                 </div>
-                <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
-                    <span class="count_top"><i class="material-icons">assignment_turned_in</i> This Month</span>
-                    <div class="count blue"><?php
-                        $this->db->where('month(saletime)', date('m'));
-                        $this->db->where('year(saletime)', date('Y'));
-                        //$this->db->like('status', 'Paid');
-                        $this->db->from('payments');
-                        echo $this->db->count_all_results();
-                        ?>.00</div>
-                </div>
-
-                <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
-                    <span class="count_top"><i class="material-icons">assignment_turned_in</i> This Year</span>
-                    <div class="count blue"><?php
-                        $this->db->where('year(saletime)', date('Y'));
-                        //$this->db->like('status', 'Paid');
-                        $this->db->from('payments');
-                        echo $this->db->count_all_results();
-                        ?>.00</div>
-                </div>
-            </div>
-
-            <div class="row tile_count">    
-                <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
-                    <span class="count_top"><i class="material-icons">assignment_turned_in</i> Total Amount ( <?php echo settings()[0]->currency; ?> )</span>
-                    <div class="count blue"><?php
-                        $this->db->select_sum('amount');
-                        $this->db->from('payments');
-                        $subOfPay = $this->db->get();
-                        $subOfPay = $subOfPay->result()[0];
-                        echo number_format($subOfPay->amount, 2);
-                        ?></div>  
-                </div>
-                
-                <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
-                    <span class="count_top"><i class="material-icons">assignment_turned_in</i> Month's Amount ( <?php echo settings()[0]->currency; ?> )</span>
-                    <div class="count blue"><?php
-                        $this->db->select_sum('amount');
-                        $this->db->from('payments');
-                        $this->db->where('month(saletime)', date('m'));
-                        $subOfPay = $this->db->get();
-                        $subOfPay = $subOfPay->result()[0];
-                        echo number_format($subOfPay->amount, 2);
-                        ?></div>
-                </div>
-
-                <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count">
-                    <span class="count_top"><i class="material-icons">assignment_turned_in</i> Year's Amount ( <?php echo settings()[0]->currency; ?> ) </span>
-                    <div class="count blue"><?php
-                        $this->db->select_sum('amount');
-                        $this->db->from('payments');
-                        $this->db->where('year(saletime)', date('Y'));
-                        $subOfPay = $this->db->get();
-                        $subOfPay = $subOfPay->result()[0];
-                        echo number_format($subOfPay->amount, 2);
-                        ?></div>
-                </div>
-            </div>  
-
-        </div>
+                <h4 class="page-title">Edit Balance</h4>
+            </div><!--end page-title-box-->
+        </div><!--end col-->
     </div>
-</div>    
+    <!-- end page title end breadcrumb -->
 
-<div class="col-md-11 col-sm-11 col-xs-11 rightSideWrapper">
-    <div class="x_panel">
+
+</div><!-- container -->
+<div class="row">
+                        <div class="col-lg-3">
+                            <div class="card card-eco">
+                                <div class="card-body">
+                                    <h4 class="title-text mt-0">Total Balances ( <?php echo settings()[0]->currency; ?> )</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="font-weight-bold"><?php
+                        $this->db->from('payments');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                        <i class="dripicons-user-group card-eco-icon text-pink align-self-center"></i>
+                                    </div>                                     
+                             
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                        <div class="col-lg-3">
+                            <div class="card card-eco">
+                                <div class="card-body">
+                                    <h4 class="title-text mt-0"> This Month ( <?php echo settings()[0]->currency; ?> )</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="font-weight-bold"><?php
+                        $this->db->where('month(saletime)', date('m'));
+                        $this->db->where('year(saletime)', date('Y'));
+                        //$this->db->like('status', 'Paid');
+                        $this->db->from('payments');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                        <i class="dripicons-cart card-eco-icon text-secondary  align-self-center"></i>
+                                    </div>                                     
+                                   
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                        <div class="col-lg-3">
+                            <div class="card card-eco">
+                                <div class="card-body">
+                                    <h4 class="title-text mt-0"> This Year ( <?php echo settings()[0]->currency; ?> )</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="font-weight-bold"><?php
+                        $this->db->where('year(saletime)', date('Y'));
+                        //$this->db->like('status', 'Paid');
+                        $this->db->from('payments');
+                        echo $this->db->count_all_results();
+                        ?>.00</h3>
+                                        <i class="dripicons-jewel card-eco-icon text-warning  align-self-center"></i>
+                                    </div>                                   
+                                   
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                        <div class="col-lg-3">
+                            <div class="card card-eco">
+                                <div class="card-body">
+                                    <h4 class="title-text mt-0"> Total Amount ( <?php echo settings()[0]->currency; ?> )</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="font-weight-bold"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('payments');
+                        $subOfPay = $this->db->get();
+                        $subOfPay = $subOfPay->result()[0];
+                        echo number_format($subOfPay->amount, 2);
+                        ?></h3>
+                                        <i class="dripicons-wallet card-eco-icon text-success  align-self-center"></i>
+                                    </div>                                    
+                          
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card card-eco">
+                                <div class="card-body">
+                                    <h4 class="title-text mt-0"> This Month ( <?php echo settings()[0]->currency; ?> )</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="font-weight-bold"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('payments');
+                        $this->db->where('month(saletime)', date('m'));
+                        $subOfPay = $this->db->get();
+                        $subOfPay = $subOfPay->result()[0];
+                        echo number_format($subOfPay->amount, 2);
+                        ?></h3>
+                                        <i class="fab fa-google-wallet card-eco-icon text-warning align-self-center"></i>
+                                    </div>                                     
+                                   
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                        <div class="col-lg-3">
+                            <div class="card card-eco">
+                                <div class="card-body">
+                                    <h4 class="title-text mt-0"> This Year ( <?php echo settings()[0]->currency; ?> )</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <h3 class="font-weight-bold"><?php
+                        $this->db->select_sum('amount');
+                        $this->db->from('payments');
+                        $this->db->where('year(saletime)', date('Y'));
+                        $subOfPay = $this->db->get();
+                        $subOfPay = $subOfPay->result()[0];
+                        echo number_format($subOfPay->amount, 2);
+                        ?></h3>
+                                        <i class="fas fa-clipboard-check card-eco-icon text-success  align-self-center"></i>
+                                    </div>                                     
+                                    
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div><!--end col-->
+                        
+</div>
+<div class="card">
+<div class="card-body">
+    <div class="col-lg-12">
         <div class="x_title">
-            <h2><i class="material-icons">add</i> Edit Balance</h2>                
+            <h2> Edit Balance</h2>                
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
@@ -123,7 +178,7 @@
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">                                                
-                            <button id="send" type="submit" class="btn btn-success"><i class="material-icons">add</i> Add Now</button>
+                            <button id="send" type="submit" class="btn btn-success"> Add Now</button>
                         </div>
                     </div>
                 </form>
@@ -135,5 +190,3 @@
 </div>
 
 </div><!-- Container -->
-
-    

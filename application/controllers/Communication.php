@@ -23,7 +23,7 @@ class Communication extends CI_Controller {
     function __construct() {
         parent::__construct();
         isAdmin();
-        isKena();
+        
         isLogin();
         $this->load->model('main');
         $this->load->model('global_m');
