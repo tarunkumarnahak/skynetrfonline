@@ -8,7 +8,7 @@
         <meta content="Mannatthemes" name="author" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="<?php echo base_url(); ?>assets\dashboard\assets\images\favicon.ico">
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>assets\dashboard\assets\images\logo-sm.png">
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\footable\css\footable.bootstrap.css" rel="stylesheet" type="text/css">
 
         <!-- App css -->
@@ -25,6 +25,14 @@
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\sweet-alert2\sweetalert2.min.css" rel="stylesheet" type="text/css">
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\animate\animate.css" rel="stylesheet" type="text/css">
 
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\jquery-steps\jquery.steps.css">
+
+<!-- App css -->
+<link href="<?php echo base_url(); ?>assets\dashboard\assets\css\bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo base_url(); ?>assets\dashboard\assets\css\icons.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo base_url(); ?>assets\dashboard\assets\css\metisMenu.min.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo base_url(); ?>assets\dashboard\assets\css\style.css" rel="stylesheet" type="text/css" />
+
 
 
     </head>
@@ -38,7 +46,8 @@
             <div class="topbar-left">
                 <a href="<?php echo base_url(); ?>home" class="logo">
                     <span>
-                        <img src="<?php echo base_url(); ?>assets\dashboard\assets\images\logo-sm.png" alt="logo-small" class="logo-sm">
+                        <img src="<?php echo base_url(); ?>assets\dashboard\assets\images\logo-sm.png" alt="logo-small" class="logo-sm mr-2" height="73">
+                         
                     </span>
                    
                 </a>
@@ -48,56 +57,13 @@
             <nav class="navbar-custom">    
                 <ul class="list-unstyled topbar-nav float-right mb-0"> 
                     
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="false" aria-expanded="false">
-                            <i class="dripicons-bell noti-icon"></i>
-                            <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
-                            <!-- item-->
-                            <h6 class="dropdown-item-text">
-                                Notifications (18)
-                            </h6>
-                            <div class="slimscroll notification-list">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
-                                    <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                                    <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-warning"><i class="mdi mdi-message"></i></div>
-                                    <p class="notify-details">New Message received<small class="text-muted">You have 87 unread messages</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
-                                    <p class="notify-details">Your item is shipped<small class="text-muted">It is a long established fact that a reader will</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
-                                    <p class="notify-details">Your order is placed<small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
-                                </a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-danger"><i class="mdi mdi-message"></i></div>
-                                    <p class="notify-details">New Message received<small class="text-muted">You have 87 unread messages</small></p>
-                                </a>
-                            </div>
-                            <!-- All-->
-                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
-                                View all <i class="fi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </li>
+                    
 
                     <li class="dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                             aria-haspopup="false" aria-expanded="false">
-                            <img src=" assets/images/users/user-4.jpg" alt="profile-user" class="rounded-circle" /> 
-                            <span class="ml-1 nav-user-name hidden-sm">Amelia <i class="mdi mdi-chevron-down"></i> </span>
+                            <img src=" <?php echo base_url(); ?>assets\dashboard\assets\images\users\user-4.jpg" alt="profile-user" class="rounded-circle" /> 
+                            <span class="ml-1 nav-user-name hidden-sm">Admin<i class="mdi mdi-chevron-down"></i> </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#"><i class="dripicons-user text-muted mr-2"></i> Profile</a>
@@ -109,19 +75,14 @@
                         </div>
                     </li>
                 </ul><!--end topbar-nav-->
-    
+                
                 <ul class="list-unstyled topbar-nav mb-0">                        
                     <li>
                         <button class="button-menu-mobile nav-link waves-effect waves-light">
                             <i class="dripicons-menu nav-icon"></i>
                         </button>
                     </li>
-                    <li class="hide-phone app-search">
-                        <form role="search" class="">
-                            <input type="text" placeholder="Search..." class="form-control">
-                            <a href=""><i class="fas fa-search"></i></a>
-                        </form>
-                    </li>
+                    
                 </ul>
             </nav>
             <!-- end navbar-->
@@ -234,17 +195,18 @@
                     <div class="menu-body slimscroll">
                     <div id="MetricaAnalytic" class="main-icon-menu-pane">
                             <div class="title-box">
-                                <h6 class="menu-title">Home</h6>       
+                                <h6 class="menu-title"><i class="mdi mdi-home-account"></i>Home</h6>       
                             </div>
                             <ul class="nav">
-                            <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>Home"><i class="dripicons-meter"></i>Dashboard</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>area"><i class="dripicons-meter"></i>Add Area</a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>pppoe/"><i class="dripicons-view-thumb"></i>PPPOE</a></li>
-                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>hotspot/"><i class="dripicons-view-thumb"></i>Hotspot</a></li>
+                            <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>Home"><i class="mdi mdi-shield-home-outline"></i>Dashboard</a></li>
+                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>area"><i class="mdi mdi-image-area"></i>Add Area</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>pppoe/"><i class="mdi mdi-ip-network"></i>PPPOE</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>hotspot/"><i class="mdi mdi-access-point-network"></i>Hotspot</a></li>
                                 
                                 
                             </ul>
-                        </div><!-- end Analytic -->
+                        </div>
+                        <!-- end Analytic -->
                         <!-- <div id="MetricaAnalytic" class="main-icon-menu-pane">
                             <div class="title-box">
                                 <h6 class="menu-title">Staffs</h6>       
@@ -260,18 +222,18 @@
                                 <h6 class="menu-title">Staffs</h6>       
                             </div>
                             <ul class="nav">
-                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>staff"><i class="dripicons-meter"></i>Add Staffs</a></li>
+                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>staff"><i class="mdi mdi-worker"></i>Add Staffs</a></li>
                                 
                                 
                             </ul>
                             <div class="title-box">
                                 <h6 class="menu-title">Users</h6>
                             </div>
-                            <ul class="nav">>
-                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>addCustomer"><i class="dripicons-device-desktop"></i>Quick Add Users</a></li>
+                            <ul class="nav">
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>user/index"><i class="dripicons-device-desktop"></i>Quick Add Users</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-exchange.html"><i class="dripicons-swap"></i>CRN List</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-wallet.html"><i class="dripicons-wallet"></i>CAF List</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" crypto/crypto-calendar.html"><i class="dripicons-calendar"></i>All Users</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>user/all"><i class="dripicons-calendar"></i>All Users</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-news.html"><i class="dripicons-blog"></i>Users expiring in 7 days</a></li>
                                 <li class="nav-item"><a class="nav-link" href=" crypto/crypto-ico.html"><i class="dripicons-stack"></i>Disabled/Deleted Users</a></li>
                             </ul>
@@ -281,8 +243,8 @@
                                 <h6 class="menu-title">Plans</h6>        
                             </div>
                             <ul class="nav">
-                            <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/"><i class="dripicons-view-thumb"></i>Add new plan</a></li>
-                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/all"><i class="dripicons-view-thumb"></i>All Plans</a></li>
+                            <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/"><i class="mdi mdi-folder"></i>Add new plan</a></li>
+                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>package/all"><i class="mdi mdi-folder-multiple"></i>All Plans</a></li>
                                                            
                             </ul>
                         </div><!-- end  Project-->
@@ -368,6 +330,9 @@
         <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\bootstrap-touchspin\js\jquery.bootstrap-touchspin.min.js"></script>
 
         <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.forms-advanced.js"></script>
+
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\jquery-steps\jquery.steps.min.js"></script>
+<script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.form-wizard.init.js"></script>
 
     </body>
 </html>

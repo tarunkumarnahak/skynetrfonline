@@ -8,6 +8,23 @@
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <!-- Responsive datatable examples -->
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\plugins\datatables\responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
+        <!-- <div class="main-menu-inner">
+                    <div class="menu-body slimscroll">
+                    <div id="MetricaAnalytic" class="main-icon-menu-pane">
+                            <div class="title-box">
+                                <h6 class="menu-title"><i class="mdi mdi-home-account"></i>Home</h6>       
+                            </div>
+                            <ul class="nav">
+                            <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>Home"><i class="mdi mdi-shield-home-outline"></i>Dashboard</a></li>
+                                <li class="nav-item"><a class="nav-link" href=" <?php echo base_url(); ?>area"><i class="mdi mdi-image-area"></i>Add Area</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>pppoe/"><i class="mdi mdi-ip-network"></i>PPPOE</a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>hotspot/"><i class="mdi mdi-access-point-network"></i>Hotspot</a></li>
+                                
+                                
+                            </ul>
+                    </div>
+</div>
+</div> -->
 <div class="page-content">
 
 
@@ -411,12 +428,12 @@
             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                 <thead>
                     <tr class="headings">
-                        <th class="column-title" style="display: table-cell;">No </th>
+                        <th >No </th>
                        
-                        <th class="column-title" style="display: table-cell;">Name </th>
-                        <th class="column-title" style="display: table-cell;">Phone </th>
-                        <th class="column-title" style="display: table-cell;">Package </th>
-                        <th class="column-title" style="display: table-cell;">ID </th>
+                        <th >Name </th>
+                        <th >Phone </th>
+                        <th >Package </th>
+                        <th >ID </th>
                         <th class="column-title" style="display: table-cell;">Password </th>
                         <th class="column-title" style="display: table-cell;">Location </th>
                         <th class="column-title" style="display: table-cell;">Status </th>
@@ -436,24 +453,24 @@
                             <td class=" "><?php echo $row->mobile; ?></td>
 
                             <?php if(package($row->package)){ ?>
-                                <td class=" "><span class="label label-primary"><?php echo package($row->package)->packname . " (" . package($row->package)->packvolume . ") (" . package($row->package)->packprice . ") (" . package($row->package)->total . ")" ; ?></span></td>
+                                <td class=" "><span class="badge badge-primary"><?php echo package($row->package)->packname . " (" . package($row->package)->packvolume . ") (" . package($row->package)->packprice . ") (" . package($row->package)->total . ")" ; ?></span></td>
                             <?php }else{ ?>
                                 <td class=" ">N/A</td>
                             <?php } ?>
 
                             <td class=" "><?php echo $row->user_id; ?></td>
                             <td class=" "><?php echo $row->password; ?></td>
-                            <td class=" "><span class="label label-primary"><?php echo $row->location; ?></span></td>
-                            <td class=""><span class="label label-<?php
+                            <td class=" "><span class="badge badge-primary"><?php echo $row->location; ?></span></td>
+                            <td class=""><span class="badge badge-<?php
                                 if ($row->status == "Active") {
                                     echo "success";
                                 } elseif ($row->status == "Pending") {
-                                    echo "primary";
-                                } else {
                                     echo "warning";
+                                } else {
+                                    echo "danger";
                                 }
                                 ?>"><?php echo $row->status; ?></span></td>
-                            <td class="action-link"><a href="<?php echo base_url(); ?>user/view/<?php echo $row->id; ?>/"><span class="label label-success">View</span></a> <a href="<?php echo base_url(); ?>user/edit/<?php echo $row->id; ?>/"><span class="label label-warning">Edit</span></a> <a href="<?php echo base_url(); ?>user/delete/<?php echo $row->id; ?>/" ><span class="label label-danger delete">Delete</span></a></td>
+                            <td class="action-link"><a href="<?php echo base_url(); ?>user/view/<?php echo $row->id; ?>/"><i class="mdi mdi-eye-circle"></i></a> <a href="<?php echo base_url(); ?>user/edit/<?php echo $row->id; ?>/"><i class="fas fa-edit text-info font-16"></i></a> <a href="<?php echo base_url(); ?>user/delete/<?php echo $row->id; ?>/" ><i class="fas fa-trash-alt text-danger font-16"id="sa-warning"></i></a></td>
                         </tr>
                     <?php } ?>
                 </tbody>

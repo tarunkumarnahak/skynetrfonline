@@ -78,8 +78,8 @@
                                 <td class=" "><?php echo countRow('staff', 'area', $row->name); ?></td>
                                 
                                 <td class="action-link">
-                                    <a href="<?php echo base_url(); ?>area/edit/<?php echo $row->id; ?>"><span class="label label-warning">Edit</span></a>
-                                    <a href="<?php echo base_url(); ?>area/delete/<?php echo $row->id; ?>"><span class="label label-danger delete">Delete</span></a>
+                                    <a href="<?php echo base_url(); ?>area/edit/<?php echo $row->id; ?>"><i class="fas fa-edit text-info font-16"></i></a>
+                                    <a href="<?php echo base_url(); ?>area/delete/<?php echo $row->id; ?>"><i class="fas fa-trash-alt text-danger font-16"id="sa-warning"></i></a>
                                 </td>	
                             </tr>
                         <?php } ?>

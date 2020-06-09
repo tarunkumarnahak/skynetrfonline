@@ -28,7 +28,7 @@
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets\welcome\css\responsive.css">
 
-        <title>SkyNet RF Online - Broadband & Internet Service Providers HTML Template</title>
+        <title>SkyNet RF Online - Broadband & Internet Service Providers </title>
 
         <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets\welcome\img\favicon.png">
     </head>
@@ -229,10 +229,10 @@ We're just a phone call away
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
-                            <div class="logo">
+                            <!-- <div class="logo">
                                 <a href="#"><img src="<?php echo base_url(); ?>\welcome\img\logo.png" alt="image"></a>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum sda.</p>
-                            </div>
+                            </div> -->
 
                             <form class="newsletter-form" data-toggle="validator">
                                 <input type="email" class="newsletter-input" placeholder="Your Email Address" name="EMAIL" required autocomplete="off">
@@ -278,11 +278,12 @@ We're just a phone call away
 
                             <div class="widget-contact-info">
                                 <p>
-                                    <a href="#">1 (800) 216 20 20</a>
+                                <a href="tel:+916232758222">(+91)6232758222</a>
                                     <span>(Customer service and support)</span>
-                                    <a href="#">1 (800) 216 20 20</a>
+                                    <a href="tel:+916232758222">(+91)6232758222</a>
                                     <span>(For new customers)</span>
-                                    1600 Harrison ave, office 203 New York, NY 309090
+                                    Shop no.42,A market,Hudco,Bhilai.
+                                    Durg,C.G 490009
                                 </p>
                             </div>
                         </div>
@@ -292,7 +293,7 @@ We're just a phone call away
 
             <div class="copyright-area">
                 <div class="container">
-                    <p>Developed by Tarun Kumar Nahak<br><i class="far fa-copyright"></i> Copyright SkyNet RF Online 2019 All Rights Reserved</p>
+                <a href=""> Developed By-Tarun Kumar Nahak</a><p><i class="far fa-copyright"></i>  Copyright SkyNet RF Online 2019 All Rights Reserved</p>
                 </div>
             </div>
         </footer>

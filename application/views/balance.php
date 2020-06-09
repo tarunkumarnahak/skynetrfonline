@@ -333,7 +333,7 @@
                             <td class=" "><?php echo $row->title; ?></td>
                             <td class=" "><?php echo settings()[0]->currency . " " . number_format($row->amount, 2); ?></td>
                             <td class=" "><?php echo date('Y-m-d', strtotime($row->date)); ?></td>
-                            <td class=""><span class="label label-<?php
+                            <td class=""><span class="badge badge-<?php
                                 if ($row->type == "Income") {
                                     echo "success";
                                 } else {
@@ -341,8 +341,8 @@
                                 }
                                 ?>"><?php echo $row->type; ?></span></td>
                             <td class="action-link">
-                                <a href="<?php echo base_url(); ?>balance/edit/<?php echo $row->id; ?>"><span class="label label-warning">Edit</span></a>
-                                <a href="<?php echo base_url(); ?>balance/delete/<?php echo $row->id; ?>"><span class="label label-danger delete">Delete</span></a>
+                                <a href="<?php echo base_url(); ?>balance/edit/<?php echo $row->id; ?>"><i class="fas fa-edit text-info font-16"></i></a>
+                                <a href="<?php echo base_url(); ?>balance/delete/<?php echo $row->id; ?>"><i class="fas fa-trash-alt text-danger font-16"id="sa-warning"></i></a>
                             </td>
                         </tr>
                     <?php } ?>

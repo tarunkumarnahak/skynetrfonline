@@ -54,7 +54,7 @@
                                 <td class=" "><?php echo (getUser($row->userid)) ? getUser($row->userid)->name : "N/A"; ?></td>
                                 <?php if(getUser($row->userid)){
                                     if(package(getUser($row->userid)->package)){ ?>
-                                      <td class=" "><span class="label label-primary"><?php echo package(getUser($row->userid)->package)->packname . " (" . package(getUser($row->userid)->package)->packvolume . ") (" . package(getUser($row->userid)->package)->packprice . ") (" . package(getUser($row->userid)->package)->total . ")" ; ?></span></td>
+                                      <td class=" "><span class="badge badge-primary"><?php echo package(getUser($row->userid)->package)->packname . " (" . package(getUser($row->userid)->package)->packvolume . ") (" . package(getUser($row->userid)->package)->packprice . ") (" . package(getUser($row->userid)->package)->total . ")" ; ?></span></td>
                                     <?php }else{?>
                                       <td class=" ">N/A</td>
                                     <?php }
@@ -63,9 +63,9 @@
                                 <?php } ?>
 
                                 <?php if($row->status == "Unpaid" || $row->status == " "){ ?>
-                                    <td class=" "><span class="label label-warning"><?php echo $row->status; ?></td>
+                                    <td class=" "><span class="badge badge-warning"><?php echo $row->status; ?></td>
                                 <?php }else{ ?>
-                                    <td class=" "><span class="label label-success"><?php echo $row->status; ?></td>
+                                    <td class=" "><span class="badge badge-success"><?php echo $row->status; ?></td>
                                 <?php }?>
 
                                 <td class="action-link">
@@ -73,15 +73,15 @@
                                     <?php if(getUser($row->userid)){ ?>
 
                                       <?php if(package(getUser($row->userid)->package)){ ?>
-                                        <a href="<?php echo base_url(); ?>invoice/view/<?php echo $row->invoiceID; ?>"><span class="label label-primary">View</span></a>
+                                        <a href="<?php echo base_url(); ?>invoice/view/<?php echo $row->invoiceID; ?>"><i class="fas fa-edit text-info font-16"></i></a>
                                       <?php }else{ ?>
-                                        <a href="#"><span class="label label-danger">Package Not Found</span></a>
+                                        <a href="#"><span class="badge badge-danger">Package Not Found</span></a>
                                       <?php } ?>
                                     <?php }else{ ?>
-                                        <a href="#"><span class="label label-danger">Package Not Found</span></a>
+                                        <a href="#"><span class="badge badge-danger">Package Not Found</span></a>
                                     <?php } ?>
 
-                                    <a href="<?php echo base_url(); ?>invoice/delete/<?php echo $row->invoiceID; ?>"><span class="label label-danger delete">Delete</span></a>
+                                    <a href="<?php echo base_url(); ?>invoice/delete/<?php echo $row->invoiceID; ?>"><i class="fas fa-trash-alt text-danger font-16"id="sa-warning"></i></a>
                                 </td>
                             </tr>
                         <?php } ?>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zxx">
     
-<!-- Mirrored from templates.envytheme.com/bahama/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2020 21:15:12 GMT -->
+
 <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -28,7 +28,7 @@
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets\welcome\css\responsive.css">
 
-        <title>Skynet RF Online - Broadband & Internet Service Providers HTML Template</title>
+        <title>Skynet RF Online - Broadband & Internet Service Providers </title>
 
         <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets\welcome\img\favicon.png">
     </head>
@@ -419,7 +419,8 @@ we offer you the fastest, most consistent internet experience through latest tec
                                     <span>(Customer service and support)</span>
                                     <a href="tel:+916232758222">(+91)6232758222</a>
                                     <span>(For new customers)</span>
-                                    1600 Harrison ave, office 203 New York, NY 309090
+                                    Shop no.42,A market,Hudco,Bhilai.
+                                    Durg,C.G 490009
                                 </p>
                             </div>
                         </div>
@@ -429,7 +430,7 @@ we offer you the fastest, most consistent internet experience through latest tec
 
             <div class="copyright-area">
                 <div class="container">
-                    <p>Developed By-Tarun Kumar Nahak<br><i class="far fa-copyright"></i>  Copyright SkyNet RF Online 2019 All Rights Reserved</p>
+                   <a href=""> Developed By-Tarun Kumar Nahak</a><p><i class="far fa-copyright"></i>  Copyright SkyNet RF Online 2019 All Rights Reserved</p>
                 </div>
             </div>
         </footer>

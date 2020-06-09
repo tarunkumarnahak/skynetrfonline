@@ -140,7 +140,8 @@
                                 <i class="flaticon-place"></i>
                             </div>
                             <h3>Address</h3>
-                            <p>176, Street Name, New York, NY 10014176, USA</p>
+                            <p> Shop no.42,A market,Hudco,Bhilai.
+                                    Durg,C.G 490009</p>
 
                             <div class="image-box">
                                 <img src="<?php echo base_url(); ?>assets\welcome\css\shape-image\1.png" alt="image">
@@ -299,7 +300,8 @@
                             <ul class="footer-contact-info">
                                 <li><a href="tel:+916232758222">(+91)6232758222</a></li>
                                 <li><a href="#"><i class="fas fa-envelope"></i> Email Us</a></li>
-                                <li>123, New Lenox Chicago, IL, 60606</li>
+                                <li> Shop no.42,A market,Hudco,Bhilai.
+                                    Durg,C.G 490009</li>
                                 <li><a href="#"><i class="fas fa-map-marker-alt"></i> Get Direction</a></li>
                             </ul>
                         </div>
@@ -320,7 +322,7 @@
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <p>Developed by Tarun Kumar Nahak<br><i class="far fa-copyright"></i> Copyright SkyNet RF Online 2019 All Rights Reserved</p>
+                        <a href=""> Developed By-Tarun Kumar Nahak</a><p><i class="far fa-copyright"></i>  Copyright SkyNet RF Online 2019 All Rights Reserved</p>
                         </div>
                     </div>
                 </div>

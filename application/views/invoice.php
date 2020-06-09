@@ -11,23 +11,69 @@
     
 ?>
 
-<div class="col-md-11 col-sm-11 col-xs-11 rightSideWrapper">
-    <div class="x_panel">
-        <div class="x_title">
-            <h2>Invoice</h2>                    
-            <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-            <div class="col-md-12">
-                <div class="invoice-box">
-                    <table cellpadding="0" cellspacing="0">
-                        <tr class="item info">
-                           
-                            <td class="title">
-                                <img src="<?php echo base_url(); ?>assets/images/final/<?php echo logo(); ?>" style="width:100%; max-width:50px;">
-                            </td>
-                            <td>
-                                <strong>Invoice #:</strong> <?php echo $invoice[0]->invoiceID; ?><br>
+<div class="page-content">
+
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-right">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Invoices</a></li>
+                                        <li class="breadcrumb-item active">View Invoice</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Payment Invoice</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+  
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="card">
+                                <div class="card-body invoice-head"> 
+                                    <div class="row">
+                                        <div class="col-md-4 align-self-center">                                                
+                                            <img src="<?php echo base_url(); ?>assets\dashboard\assets\images\logo-sm.png" alt="logo-small" class="logo-sm mr-2" height="73">                                            
+                                                                                          
+                                        </div>
+                                        <div class="col-md-8">
+                                                
+                                            <ul class="list-inline mb-0 contact-detail float-right">                                                   
+                                                <li class="list-inline-item">
+                                                    <div class="pl-3">
+                                                        <i class="mdi mdi-web"></i>
+                                                        <p class="text-muted mb-0"><?php echo settings()[0]->email;?></p>
+                                                        <!-- <p class="text-muted mb-0">www.qrstuvwxyz.com</p> -->
+                                                    </div>                                                
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <div class="pl-3">
+                                                        <i class="mdi mdi-phone"></i>
+                                                        <p class="text-muted mb-0"><?php echo settings()[0]->mobile;?></p>
+                                                        <!-- <p class="text-muted mb-0">+123 123456789</p> -->
+                                                    </div>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <div class="pl-3">
+                                                        <i class="mdi mdi-map-marker"></i>
+                                                        <p class="text-muted mb-0"> <?php echo settings()[0]->address;?></p>
+                                                        <p class="text-muted mb-0"><?php echo settings()[0]->city;?>, <?php echo settings()[0]->country;?>, <?php echo settings()[0]->zip;?></p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div><!--end card-body-->
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="">
+                                                <!-- <h6 class="mb-0"><b>Order Date :</b> 11/05/2019</h6>
+                                                <h6><b>Order ID :</b> # 23654789</h6> -->
+                                                 <strong>Invoice #:</strong> <?php echo $invoice[0]->invoiceID; ?><br>
                                 <strong>Created:</strong> <?php echo $invoice[0]->createdate; ?><br>
                                 <strong>Due:</strong> <?php echo $invoice[0]->duedate; ?><br>
                                 <strong>Payment Method:</strong> <?php echo settings()[0]->paymentmethod;?><br>
@@ -40,41 +86,67 @@
                                     <strong>Paid Method:</strong> <?php echo $invoice[0]->paidmethod; ?><br>
                                     <strong>Paid Acc. Info:</strong> <?php echo $invoice[0]->paidacc; ?><br><br>
                                 <?php } ?>
-                            </td>
-                        </tr>
-                        <tr class="item info">                            
-                            <td>
-                                <br><strong><?php echo settings()[0]->name;?></strong><br>
-                                <?php echo settings()[0]->slogan;?><br>
-                                <?php echo settings()[0]->address;?><br>
-                                <?php echo settings()[0]->city;?>, <?php echo settings()[0]->country;?>, <?php echo settings()[0]->zip;?><br>
-                                <?php echo settings()[0]->mobile;?><br>
-                                <?php echo settings()[0]->email;?><br><br>
-                            </td>
-                            <td>
-                                <br><strong><?php echo $thisUser->name; ?></strong><br>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">                                            
+                                            <div class="float-left">
+                                                <address class="font-13">
+                                                    <strong class="font-14">Billed To :</strong><br>
+                                                    <strong><?php echo $thisUser->name; ?></strong><br>
                                <?php echo $thisPackage->packname . " (" . $thisPackage->packvolume . ")" ; ?><br>
                                 <?php echo $thisUser->area; ?>, <?php $thisUser->location; ?><br>
                                 <?php echo $thisUser->mobile; ?><br>
                                 <?php echo $thisUser->email; ?><br><br>
-                            </td>
-                        </tr>
-                        
-                        <tr class="item">
-                            <td><strong>Package/Services</strong></td>
-                            <td><strong>Amount</strong></td>
-                        </tr>
+                                                </address>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="">
+                                                <address class="font-13">
+                                                    <strong class="font-14">Shipped To:</strong><br>
+                                                    <strong><?php echo $thisUser->name; ?></strong><br>
+                               <?php echo $thisPackage->packname . " (" . $thisPackage->packvolume . ")" ; ?><br>
+                                <?php echo $thisUser->area; ?>, <?php $thisUser->location; ?><br>
+                                <?php echo $thisUser->mobile; ?><br>
+                                <?php echo $thisUser->email; ?><br><br>
+                                                </address>
+                                            </div>
+                                        </div>                                           
+                                        
+                                        <div class="col-md-3">
+                                            <div class="text-center bg-light p-3 mb-3">
+                                                <h5 class="bg-info mt-0 p-2 text-white d-sm-inline-block">Payment Methods</h5>
+                                                <h6 class="font-13">Paypal & Cards Payments :</h6>
+                                                <p class="mb-0 text-muted">CompanyA/c.paypal@gmai.com</p>
+                                                <p class="mb-0 text-muted">Visa, Master Card, Chaque</p>
+                                            </div>                                              
+                                        </div>                                            
+                                    </div>
 
-                        <tr class="item">
-                            <td><?php echo $thisPackage->packname . " (" . $thisPackage->packvolume . ")" ; ?></td>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Package/Service</th>
+                                                            <th>Amount</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                        <td><?php echo $thisPackage->packname . " (" . $thisPackage->packvolume . ")" ; ?></td>
                             <td><?php echo settings()[0]->currency . " " . number_format($thisPackage->packprice, 2); ?></td>
-                        </tr>
-                        <?php if($thisPackage->cost1){ ?>
+
+                                                        </tr>
+                                                        
+                                                        <?php if($thisPackage->cost1){ ?>
                             <tr class="item">
                                 <td><?php echo $thisPackage->cost1; ?></td>
                                 <td><?php echo settings()[0]->currency . " " . number_format($thisPackage->value1, 2); ?></td>
                             </tr>
                         <?php }?>
+                                                        
                         <?php if($thisPackage->cost2){ ?>
                             <tr class="item">
                                 <td><?php echo $thisPackage->cost2; ?></td>
@@ -100,37 +172,6 @@
                             </tr>
                         <?php }?>
                             
-                        <?php if($invoice[0]->cost1){ ?>
-                                <tr class="item">
-                                        <td><?php echo $invoice[0]->cost1; ?></td>
-                                        <td><?php echo settings()[0]->currency . " " . number_format($invoice[0]->value1, 2); ?></td>
-                                </tr>
-                        <?php }?>
-                        <?php if($invoice[0]->cost2){ ?>
-                                <tr class="item">
-                                        <td><?php echo $invoice[0]->cost2; ?></td>
-                                        <td><?php echo settings()[0]->currency . " " . number_format($invoice[0]->value2, 2); ?></td>
-                                </tr>
-                        <?php }?>
-                        <?php if($invoice[0]->cost3){ ?>
-                                <tr class="item">
-                                        <td><?php echo $invoice[0]->cost3; ?></td>
-                                        <td><?php echo settings()[0]->currency . " " . number_format($invoice[0]->value3, 2); ?></td>
-                                </tr>
-                        <?php }?>
-                        <?php if($invoice[0]->cost4){ ?>
-                                <tr class="item">
-                                        <td><?php echo $invoice[0]->cost4; ?></td>
-                                        <td><?php echo settings()[0]->currency . " " . number_format($invoice[0]->value4, 2); ?></td>
-                                </tr>
-                        <?php }?>
-                        <?php if($invoice[0]->cost5){ ?>
-                                <tr class="item">
-                                        <td><?php echo $invoice[0]->cost5; ?></td>
-                                        <td><?php echo settings()[0]->currency . " " . number_format($invoice[0]->value5, 2); ?></td>
-                                </tr>
-                        <?php }?>
-                            
                             
                         <tr class="item">
                             <td><strong>Subtotal</strong></td>
@@ -148,19 +189,44 @@
                             <td><strong>Total</strong></td>
                             <td><strong><?php echo settings()[0]->currency . " " . number_format($netTotal, 2); ?></strong></td>
                         </tr>
-                    </table>
-                </div>
-                <div class="col-md-11 mediumSpaceTop mediumSpaceBtm">
-                    <button class="btn btn-primary right" id="print">Print</button>
-                    <button class="btn btn-primary right"><a class="text white" href="<?php echo base_url();?>invoice/generate/<?php echo $invoice[0]->invoiceID; ?>">Generate PDF</a></button>
-                    <!--<button class="btn btn-primary right"  href="<?php echo base_url('invoice/paypal/' . $invoice[0]->invoiceID);?>" data-toggle="modal" data-target=".bs-payment-modal-lg">Payment</button>-->
-                    <button class="btn btn-primary right"  href="#" data-toggle="modal" data-target=".bs-payment-modal-lg">Pay Now By Paypal/Stripe</button>
+                                                    </tbody>
+                                                </table>
+                                            </div>                                            
+                                        </div>                                        
+                                    </div>
+
+                                    <!-- <div class="row justify-content-center">
+                                        <div class="col-lg-6">
+                                            <h5 class="mt-4">Terms And Condition :</h5>
+                                            <ul class="pl-3">
+                                                <li><small>All accounts are to be paid within 7 days from receipt of invoice. </small></li>
+                                                <li><small>To be paid by cheque or credit card or direct payment online.</small></li>
+                                                <li><small> If account is not paid within 7 days the credits details supplied as confirmation<br> of work undertaken will be charged the agreed quoted fee noted above.</small></li>                                            
+                                            </ul>
+                                        </div>                                         -->
+                                        <div class="col-lg-6 align-self-end">
+                                            <div class="w-25 float-left">
+                                                <small>Account Manager</small>
+                                                <img src="<?php echo base_url(); ?>assets\dashboard\assets\images\signature.png" alt="" class="" height="48">
+                                                <p class="border-top">Signature</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!-- <div class="row d-flex justify-content-center">
+                                        <div class="col-lg-12 col-xl-4 ml-auto align-self-center">
+                                            <div class="text-center text-muted"><small>Thank you very much for doing business with us. Thanks !</small></div>
+                                        </div> -->
+                                        <div class="col-lg-12 col-xl-4">
+                                            <div class="float-right d-print-none">
+                                                <a href="javascript:window.print()" class="btn btn-info"><i class="fa fa-print"></i></a>
+                                                
+                                                
+                    <!-- <button class="btn btn-primary right"  href="<?php echo base_url('invoice/paypal/' . $invoice[0]->invoiceID);?>" data-toggle="modal" data-target=".bs-payment-modal-lg">Payment</button> -->
+                    <button class="btn btn-primary right"  href="#" data-toggle="modal" data-target=".bs-payment-modal-lg">Pay Now By </button>
                     <button class="btn btn-primary right"  href="#" data-toggle="modal" data-target=".bs-update-modal-lg">Manual Payment</button>
-                    
-                </div>
-                
-                
-                <div class="modal fade bs-payment-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                                            </div>
+                                            <div class="modal fade bs-payment-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                       <div class="modal-content">
 
@@ -213,9 +279,10 @@
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
                           </button>
-                          <h4 class="modal-title" id="myModalLabel">Manual Invoice Payment</h4>
+                          
                         </div>
                         <div class="modal-body">
+                            <h4>Manual Payment information</h4>
                           <form class="form-horizontal form-label-left" role="form" enctype="multipart/form-data" method="post" action="<?php echo base_url(); ?>invoice/manual" accept-charset="utf-8">
                             <input id="id" name="id" value="<?php echo $invoice[0]->invoiceID; ?>" type="hidden">
                             
@@ -329,22 +396,48 @@
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-3">                                                
-                                    <button id="send" type="Save Now!" class="btn btn-success"><i class="material-icons">save</i> Update Now</button>
+                                    <button id="send" type="Save Now!" class="btn btn-success"> Update Now</button>
                                 </div>
                             </div>
                         </form>
                         </div>
-                        <div class="modal-footer">
+                        <!-- <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
+                        </div> -->
 
-                      </div>
-                    </div>
-                  </div>
-                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--end card-->
+                        </div><!--end col-->
+                    </div><!--end row-->
+
+                </div><!-- container -->
+
+               
             </div>
-        </div>
-    </div>
-</div>
+            <script src="<?php echo base_url(); ?>assets\dashboard\assets\js\jquery.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\js\bootstrap.bundle.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\js\metisMenu.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\js\waves.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\js\jquery.slimscroll.min.js"></script>
 
-</div><!-- Container -->
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\footable\js\footable.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\moment\moment.js"></script> 
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.footable.init.js"></script> 
+
+        <!-- App js -->
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\js\app.js"></script>
+
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\sweet-alert2\sweetalert2.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.sweet-alert.init.js"></script>
+
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\moment\moment.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\daterangepicker\daterangepicker.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\select2\select2.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\timepicker\bootstrap-material-datetimepicker.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\bootstrap-maxlength\bootstrap-maxlength.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\plugins\bootstrap-touchspin\js\jquery.bootstrap-touchspin.min.js"></script>
+
+        <script src="<?php echo base_url(); ?>assets\dashboard\assets\pages\jquery.forms-advanced.js"></script>

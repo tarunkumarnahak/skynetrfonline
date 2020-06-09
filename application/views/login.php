@@ -8,7 +8,7 @@
         <meta content="Mannatthemes" name="author" />
 
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>assets\dashboard\assets\images\logo-sm.png">
 
         <!-- App css -->
         <link href="<?php echo base_url(); ?>assets\dashboard\assets\css\bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -28,7 +28,7 @@
                         <div class="card-body">
                             <div class="px-3">
                                 <div class="auth-logo-box">
-                                    <a href="../analytics/analytics-index.html" class="logo logo-admin"><img src="<?php echo base_url(); ?>assets\dashboard\assets\images\logo.png" height="55" alt="logo" class="auth-logo"></a>
+                                    <a href="<?php echo base_url(); ?>login" class="logo logo-admin"><img src="<?php echo base_url(); ?>assets\dashboard\assets\images\logo.png" height="55" alt="logo" class="auth-logo"></a>
                                 </div><!--end auth-logo-box-->
                                 
                                 <div class="text-center auth-logo-text">

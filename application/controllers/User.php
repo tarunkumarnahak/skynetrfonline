@@ -27,6 +27,7 @@ class User extends CI_Controller {
 
     public function index() {
         isAdmin();
+        // $data['users'] = $this->main->getAllUsers();
         $data['packages'] = $this->main->getAllPackages();
         $data['area'] = $this->main->getAllAreas();
         $data['staff'] = $this->main->getAllStaffs();
@@ -50,12 +51,16 @@ class User extends CI_Controller {
         $id = $this->uri->segment(3);
         $data['user'] = $this->main->getUser($id);
         $data['staff'] = $this->main->getStaff($id);
-        $this->load->view('header');
+        // $this->load->view('header');
         $this->load->view('view', $data);
         $this->load->view('footer');
     }
 
     public function insert() {
+        // $this->load->view('header');
+        // $this->load->view('adduser');
+        // $this->load->view('footer');
+       
         $data = array();
 
         $this->form_validation->set_rules('email', 'Email', 'trim|valid_email|is_unique[users.email]');
@@ -373,7 +378,7 @@ class User extends CI_Controller {
     public function invoices() {
         $id = $this->session->userdata('user_id');
         $data['invoices'] = $this->main->getAllInvoicsByUser($id);
-        $this->load->view('header');
+        // $this->load->view('header2');
         $this->load->view('userInvoices', $data);
         $this->load->view('footer');
     }
@@ -381,7 +386,7 @@ class User extends CI_Controller {
     public function invoiceview($id) {
         $userid = $this->session->userdata('user_id');
         $data['invoice'] = $this->main->getUserInvoice($id, $userid);
-        $this->load->view('header');
+        // $this->load->view('header2');
         $this->load->view('userInvoice', $data);
         $this->load->view('footer');
     }
@@ -405,7 +410,7 @@ class User extends CI_Controller {
             $data['payments'] = "";
         }
 
-        $this->load->view('header');
+        // $this->load->view('header2');
         $this->load->view('userPayments', $data);
         $this->load->view('footer');
     }

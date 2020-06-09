@@ -301,7 +301,7 @@
                             <td class=" "><?php echo $row->currency . " " . number_format($row->amount, 2); ?></td>
                             <td class=" "><?php echo $row->payeremail; ?></td>
                             <td class=" "><?php echo date('Y-m-d', strtotime($row->saletime)); ?></td>
-                            <td class=""><span class="label label-<?php
+                            <td class=""><span class="badge badge-<?php
                                 if ($row->status == "Paid") {
                                     echo "success";
                                 } else {
@@ -309,7 +309,7 @@
                                 }
                                 ?>"><?php echo $row->status; ?></span></td>
                             <td class="action-link">
-                                <a href="<?php echo base_url(); ?>payments/delete/<?php echo $row->paymentid; ?>"><span class="label label-danger delete">Delete</span></a>
+                                <a href="<?php echo base_url(); ?>payments/delete/<?php echo $row->paymentid; ?>"><i class="fas fa-trash-alt text-danger font-16"id="sa-warning"></i></a>
                             </td>	
                         </tr>
                     <?php } ?>
