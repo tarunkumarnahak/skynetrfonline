@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sgorzaly
- * Date: 19.02.18
- * Time: 20:52
- */
 
 namespace ParseCsv\tests\methods;
 

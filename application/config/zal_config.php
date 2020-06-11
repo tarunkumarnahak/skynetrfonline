@@ -1,24 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/*
-| -----------------------------------------------------
-| PRODUCT NAME: ONEZEROART CHURCH MANAGEMENT SYSTEM (CHMS)
-| -----------------------------------------------------
-| AUTHOR: ONEZEROART TEAM
-| -----------------------------------------------------
-| EMAIL: support@onezeroart.com
-| -----------------------------------------------------
-| COPYRIGHT: RESERVED BY ONEZEROART.COM
-| -----------------------------------------------------
-| WEBSITE: http://onezeroart.com
-| -----------------------------------------------------
-*/
-
-
-
-/****************** Zal Version 5.0 ******/
-/*********************************************************/
 
 
 /****************** Mailgun Config Keys For Mailing ******/

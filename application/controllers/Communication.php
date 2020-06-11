@@ -2,21 +2,7 @@
 
 use Mailgun\Mailgun;
 
-/*
-| -----------------------------------------------------
-| PRODUCT NAME: ZAL - ISP MANAGEMENT SYSTEM
-| -----------------------------------------------------
-| AUTHOR: ONEZEROART TEAM
-| -----------------------------------------------------
-| EMAIL: support@onezeroart.com
-| -----------------------------------------------------
-| COPYRIGHT: RESERVED BY ONEZEROART.COM
-| -----------------------------------------------------
-| AUTHOR PORTFOLIO: https://codecanyon.net/user/onezeroart/portfolio
-| -----------------------------------------------------
-| WEBSITE: http://onezeroart.com
-| -----------------------------------------------------
-*/
+
 
 class Communication extends CI_Controller {
 

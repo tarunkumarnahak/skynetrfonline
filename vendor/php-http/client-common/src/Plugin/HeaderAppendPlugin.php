@@ -5,17 +5,7 @@ namespace Http\Client\Common\Plugin;
 use Http\Client\Common\Plugin;
 use Psr\Http\Message\RequestInterface;
 
-/**
- * Append headers to the request.
- *
- * If the header already exists the value will be appended to the current value.
- *
- * This only makes sense for headers that can have multiple values like 'Forwarded'
- *
- * @see https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
- *
- * @author Soufiane Ghzal <sghzal@gmail.com>
- */
+
 final class HeaderAppendPlugin implements Plugin
 {
     /**

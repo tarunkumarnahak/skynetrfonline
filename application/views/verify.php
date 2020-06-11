@@ -64,35 +64,7 @@
         </div>
         
             
-            <!-- <div class="col-md-10 col-sm-10 col-xs-10 col-md-offset-1 rightSideWrapper">
-                <div class="x_panel">
-                    <div class="x_title">
-                        <h2><i class="material-icons">close</i> Verify Your Purchase Code</h2>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                        <h4 class="title green text-center">Thank you for purchase. Not Purchase Yet, <a class="red" href="https://codecanyon.net/item/zal-isp-management-system/20275848" target="_blank">Purchase Now</a></h4>
-                        <hr>
-                        <h1 class="title red text-center">Please, Verify Your Purchase Code</h1>
-                        <hr>
-                        <form class="form-horizontal form-label-left" role="form" enctype="multipart/form-data" method="post" action="<?php echo base_url(); ?>verify/kenadekha" accept-charset="utf-8">
-                            <div class="item form-group">
-                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                    <input class="form-control col-md-7 col-xs-12" name="purchasecode" type="text" placeholder="Purchase Code" required>
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-3">                                                
-                                    <button id="send" type="submit" class="btn btn-success"><i class="material-icons">verified_user</i> Verify Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        
+           
             <footer>
                 <div class="">
                     <p class="pull-right"><?php echo settings()[0]->name; ?> | <?php echo settings()[0]->slogan; ?> | <?php echo settings()[0]->copyright; ?></p>

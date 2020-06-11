@@ -5,11 +5,7 @@ namespace Http\Client\Common\Plugin;
 use Http\Client\Common\Plugin;
 use Psr\Http\Message\RequestInterface;
 
-/**
- * Removes headers from the request.
- *
- * @author Soufiane Ghzal <sghzal@gmail.com>
- */
+
 final class HeaderRemovePlugin implements Plugin
 {
     /**
