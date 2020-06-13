@@ -13,7 +13,7 @@ class User extends CI_Controller {
 
     public function index() {
         isAdmin();
-        // $data['users'] = $this->main->getAllUsers();
+        $data['users'] = $this->main->getAllUsers();
         $data['packages'] = $this->main->getAllPackages();
         $data['area'] = $this->main->getAllAreas();
         $data['staff'] = $this->main->getAllStaffs();

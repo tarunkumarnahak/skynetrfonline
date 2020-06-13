@@ -289,7 +289,7 @@
                             </div>
                             <ul class="nav"><li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>settings"><i class="mdi mdi-settings"></i>Settings</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>communication"><i class="dripicons-conversation"></i>Communication</a></li>    
-                            <li class="nav-item"><a class="nav-link" href=" pages/pages-profile.html"><i class="dripicons-user"></i>Support User</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>logs/"><i class="dripicons-user"></i>Logs</a></li>
                             
                             </ul>
                         </div><!-- end Pages -->

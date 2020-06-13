@@ -14,10 +14,10 @@ class Router extends CI_Controller {
         try {
 
             $client = new RouterOS\Client('192.168.0.3', 'admin', '');
-            //echo 'OK';
+            // echo 'OK';
 
             // $responses = $client->sendSync(new RouterOS\Request('/ip/arp/print'));
-            //
+            
             // foreach ($responses as $response) {
             //     if ($response->getType() === RouterOS\Response::TYPE_DATA) {
             //         echo 'IP: ' . $response->getProperty('address') . '<br><br> MAC: ', $response->getProperty('mac-address') . "<br><br>";
@@ -26,21 +26,21 @@ class Router extends CI_Controller {
 
 
             // $addRequest = new RouterOS\Request('/ip/arp/add');
-            //
+            
             // $addRequest->setArgument('address', '192.168.0.7');
             // $addRequest->setArgument('mac-address', '00:00:00:00:00:01');
             // $addRequest->setArgument('interface', 'ether1');
             // if ($client->sendSync($addRequest)->getType() !== RouterOS\Response::TYPE_FINAL) {
             //     die("Error when creating ARP entry for '192.168.88.100'");
             // }
-            //
+            
             // $addRequest->setArgument('address', '192.168.0.8');
             // $addRequest->setArgument('mac-address', '00:00:00:00:00:02');
             // $addRequest->setArgument('interface', 'ether1');
             // if ($client->sendSync($addRequest)->getType() !== RouterOS\Response::TYPE_FINAL) {
             //     die("Error when creating ARP entry for '192.168.88.101'");
             // }
-            //
+            
             // echo 'OK';
 
 

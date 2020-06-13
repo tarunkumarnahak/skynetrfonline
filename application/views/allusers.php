@@ -75,20 +75,20 @@
                                 <td class=" "><?php echo $row->mobile; ?></td>
 
                                 <?php if(package($row->package)){ ?>
-                                    <td class=" "><span class="label label-primary"><?php echo package($row->package)->packname . " (" . package($row->package)->packvolume . ") (" . package($row->package)->packprice . ") (" . package($row->package)->total . ")" ; ?></span></td>
+                                    <td class=" "><span class="badge badge-primary"><?php echo package($row->package)->packname . " (" . package($row->package)->packvolume . ") (" . package($row->package)->packprice . ") (" . package($row->package)->total . ")" ; ?></span></td>
                                 <?php }else{ ?>
                                     <td class=" ">N/A</td>
                                 <?php } ?>
 
                                 <td class=" "><?php echo $row->user_id; ?></td>
                                 <td class=" "><?php echo $row->password; ?></td>
-                                <td class=""><span class="label label-<?php
+                                <td class=""><span class="badge badge-<?php
                                     if ($row->status == "Active") {
                                         echo "success";
                                     } elseif ($row->status == "Pending") {
-                                        echo "primary";
-                                    } else {
                                         echo "warning";
+                                    } else {
+                                        echo "danger";
                                     }
                                     ?>"><?php echo $row->status; ?></span></td>
                                 <td class="action-link">

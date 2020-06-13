@@ -39,7 +39,7 @@
 
         <div class="x_panel">
             <div class="x_title">
-                <h2><i class="material-icons">perm_identity</i> System Session Logs</h2>
+                <h2> System Session Logs</h2>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
